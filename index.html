@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
@@ -23,6 +25,13 @@
     </header>
 
     <section id="main">
+        
+        <div class="ball-wrapper">
+            <div id="ball"></div>
+            <div id="ballshadow"></div>
+        </div>
+        <!-- https://tympanus.net/codrops/2012/05/22/creating-an-animated-3d-bouncing-ball-with-css3/ -->
+
         <div class="gyufle">
             <span class="g">G</span>
             <span class="y">y</span>
@@ -33,13 +42,18 @@
         </div>
         <div class="searh-area">
             <div class="search-name">
-                <figure class="search-icon">
-                    <img src="img/🦆 icon _magnifying glass_.png" alt="돋보기">
-                </figure>
-                <span>신입 퍼블리셔 전규리</span>
-                <div class="close-area">
+                <div class="search-name-wrapper">
+                    <figure class="search-icon">
+                        <img src="img/🦆 icon _magnifying glass_.png" alt="돋보기">
+                    </figure>
+                    <span>신입 퍼블리셔 전규리</span>
                 </div>
+                <figure class="close-here">
+                    <img src="img/X.png" alt="닫는 버튼 그림">
+                </figure>
             </div>
+
+            <div class="underline"></div>
 
             <div class="explane-me">
                 <figure>
@@ -84,7 +98,7 @@
     </section>
 
     <section id="profile">
-        <div class="profile-file-container">
+        <div class="file-container">
             <div class="index-area">
                 <figure>
                     <img src="img/profile.png" alt="profile-index">
@@ -105,7 +119,7 @@
                     <div class="introduce">
                         <div class="my-profile">
                             <figure>
-                                <img src="" alt="전규리 사진">
+                                <img src="img/gyuri-img.jpg" alt="전규리 사진">
                             </figure>
                             <div class="name">
                                 <h2>전규리</h2>
@@ -209,7 +223,7 @@
     </section>
 
     <section id="skills">
-        <div class="skills-file-container">
+        <div class="file-container">
             <div class="index-area">
                 <figure>
                     <img src="img/profile-transparent.png" alt="profile-index-transparent">
@@ -325,7 +339,7 @@
     </section>
 
     <section id="workout">
-        <div class="workout-file-container">
+        <div class="file-container">
             <div class="index-area">
                 <figure>
                     <img src="img/profile-transparent.png" alt="profile-index-transparent">
@@ -347,12 +361,12 @@
                     </div>
                     <div class="workout1-index-wrapper">
                         <div class="workout-1-img">
-                            <figure class="workout1-index"><img src="" alt="workout1"></figure>
-                            <figure class="workout1-index-transparent"><img src="" alt="workout1-transparent"></figure>
+                            <figure class="workout1-index"><img src="img/work-out.png" alt="workout1"></figure>
+                            <figure class="workout1-index-transparent"><img src="img/work-out-transparent.png" alt="workout1-transparent"></figure>
                         </div>
                         <div class="workout-2-img-wrapper">
-                            <figure class="workout2-index"><img src="" alt="workout2"></figure>
-                            <figure class="workout2-index-transparent"><img src="" alt="workout2-transparent"></figure>
+                            <figure class="workout2-index"><img src="img/work-out.png" alt="workout2"></figure>
+                            <figure class="workout2-index-transparent"><img src="img/work-out-transparent.png" alt="workout2-transparent"></figure>
                         </div>
                     </div>
                 </div>
@@ -405,26 +419,24 @@
                                     HBAF 로고를 강조하였습니다. 
                                 </p>
 
-                                <div class="hbaf-img-wrapper">
-                                    <figure">
-                                        <img src="" alt="HBAF 홈페이지 인트로">
-                                        <figcaption>글자가 옆으로 흐르는 애니매이션</figcaption>
-                                    </figure>
-                                    <figure">
-                                        <img src="" alt="HBAF 홈페이지 인트로 2">
-                                        <figcaption>커텐처럼 위아래로 찢어져 가운데 로고가 나오는 애니매이션 구현</figcaption>
-                                    </figure>
+                                <figure>
+                                    <img src="img/hbaf-1.png" alt="HBAF 홈페이지 인트로">
+                                    <figcaption>글자가 옆으로 흐르는 애니매이션</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/hbaf2.png" alt="HBAF 홈페이지 인트로 2">
+                                    <figcaption>커텐처럼 위아래로 찢어져 가운데 로고가 나오는 애니매이션 구현</figcaption>
+                                </figure>
                                 
-                                    <div class="hbaf-code">
-                                        <figure>
-                                            <img src="" alt="인트로 스크롤 멈춤 효과 이미지">
-                                            <figcaption>Js 코드 인트로 재생 시 멈춤효과</figcaption>
-                                        </figure>
-                                        <figure>
-                                            <img src="" alt="인트로 HTML 코드">
-                                            <figcaption>반응형 시 인트로가 망가지지 않도록 코딩한 HTML코드</figcaption>
-                                        </figure>
-                                    </div>
+                                <div class="hbaf-code">
+                                    <figure>
+                                        <img src="img/hbaf1-ex.png" alt="인트로 스크롤 멈춤 효과 이미지">
+                                        <figcaption>Js 코드 인트로 재생 시 멈춤효과</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="img/hbaf1-ex2.png" alt="인트로 HTML 코드">
+                                        <figcaption>반응형 시 인트로가 망가지지 않도록 코딩한 HTML코드</figcaption>
+                                    </figure>
                                 </div>
                             </div>
 
@@ -440,18 +452,18 @@
 
                                 <div class="hbaf-img-wrapper">
                                     <figure>
-                                        <img src="" alt="HBAF 홈페이지 캐릭터들">
+                                        <img src="img/hbaf-ani1.png" alt="HBAF 홈페이지 캐릭터들">
                                         <figcaption>HBAF 캐릭터와 배경 애니메이션 효과를 더해 
                                             생동감 있게 표현</figcaption>
                                     </figure>
                                     <figure>
-                                        <img src="" alt="당근맛 아몬드 캐릭터 설명">
+                                        <img src="img/hbafani2.png" alt="당근맛 아몬드 캐릭터 설명">
                                         <figcaption>스크롤을 감지하여 당근맛 아몬드가 튀어나오는 효과 구현</figcaption>
                                     </figure>
                                 
                                     <div class="hbaf-code">
                                         <figure>
-                                            <img src="" alt="애니매이션 설명 코드">
+                                            <img src="img/hbaf2ex.png" alt="애니매이션 설명 코드">
                                             <figcaption>
                                                 Js 코드 <br>
                                                 오른쪽에서 나오는 배경과 왼쪽에서 나오는 배경을 분리하여 코딩, <br>
@@ -459,7 +471,7 @@
                                             </figcaption>
                                         </figure>
                                         <figure>
-                                            <img src="" alt="당근맛 아몬드 애니매이션 설명 코드">
+                                            <img src="img/hbaf-anicarrot.png" alt="당근맛 아몬드 애니매이션 설명 코드">
                                             <figcaption>
                                                 Js 코드 <br>
                                                 스크롤을 감지하여 애니매이션의 클래스를 빼고 더하는 방식으로 코딩
@@ -481,7 +493,7 @@
 
                                 <div class="hbaf-img-wrapper">
                                     <figure>
-                                        <img src="" alt="HBAF 슬라이드 사진">
+                                        <img src="img/hbaf-slide.png" alt="HBAF 슬라이드 사진">
                                         <figcaption>
                                             반응형에 따라 슬라이드 갯수 조정 <br>
                                             (pc는 4개, tablet은 2개, mobile은 1개)
@@ -490,14 +502,14 @@
                                 
                                     <div class="hbaf-code">
                                         <figure>
-                                            <img src="" alt="슬라이드 설명 코드">
+                                            <img src="img/hbaf-slideex.png" alt="슬라이드 설명 코드">
                                             <figcaption>
                                                 Js 코드 <br>
                                                 반응형마다 슬라이드 갯수 조절하는 코드
                                             </figcaption>
                                         </figure>
                                         <figure>
-                                            <img src="" alt="당근맛 아몬드 슬라이드 설명 코드">
+                                            <img src="img/hbafslideex2.png" alt="화살표를 누르면 슬라이드가 넘어가는 코드">
                                             <figcaption>
                                                 Js 코드 <br>
                                                 화살표를 클릭하면 다음으로 넘어가는 코드
@@ -564,25 +576,25 @@
     
                                     <div class="infant-care-img-wrapper">
                                         <div class="double-slide-wrapper">
-                                            <figure">
-                                                <img src="" alt="infant-care pc버전 슬라이드">
+                                            <figure>
+                                                <img src="img/infant-slide1pc.png" alt="infant-care pc버전 슬라이드">
                                             </figure>
-                                            <figure">
-                                                <img src="" alt="infant-care 타블렛 버전 슬라이드">
+                                            <figure>
+                                                <img src="img/infant-slide1tablet.png" alt="infant-care 타블렛 버전 슬라이드">
                                              </figure>
-                                             <figure">
-                                                <img src="" alt="infant-care 모바일 버전 슬라이드">
+                                             <figure>
+                                                <img src="img/infant-slide1mobile.png" alt="infant-care 모바일 버전 슬라이드">
                                             </figure>
                                             <p>반응형에 따라 다르게 디자인하여 심미성과 가독성을 높힘</p>
                                         </div>
                                     
                                         <div class="infant-care-code">
                                             <figure>
-                                                <img src="" alt="반응형 시 사이즈 조절해주는 코드">
+                                                <img src="img/infant-slideex1.png" alt="반응형 시 사이즈 조절해주는 코드">
                                                 <figcaption>Js <br> 반응형(윈도우 사이즈 조절)마다 컨텐츠 사이즈를 조절해 주는 코드</figcaption>
                                             </figure>
                                             <figure>
-                                                <img src="" alt="이중 슬라이드 구현 코드">
+                                                <img src="img/infant-slideex2.png" alt="이중 슬라이드 구현 코드">
                                                 <figcaption>Js <br> 이중슬라이드 구현 코드</figcaption>
                                             </figure>
                                         </div>
@@ -600,19 +612,20 @@
                                 </p>
 
                                 <div class="infant-care-img-wrapper">
-                                    <figure">
-                                        <img src="" alt="infant-care 무한 슬라이드 예시">
+                                    <figure>
+                                        <img src="img/infant-infinite-slide.png" alt="infant-care 무한 슬라이드 예시">
                                         <figcaption>이중 무한 슬라이드 구현</figcaption>
                                     </figure>
                                   
                                     <div class="infant-care-code">
                                         <figure>
-                                            <img src="" alt="노드 복사 코드">
-                                            <figcaption>Js <br> 무한 슬라이드 구현을 위한 노드 복사 코드</figcaption>
+                                            <img src="img/infant-infinite-slideex.png" alt="노드 복사 코드">
+                                            <figcaption>  Js <br> 반복문을 사용한 node 복사 코드</figcaption>
                                         </figure>
                                         <figure>
-                                            <img src="" alt="이중 슬라이드 구현 코드">
-                                            <figcaption> Js <br> 무한 슬라이드 구현 코드</figcaption>
+                                            <img src="img/infant-infinite-slide-ex.png" alt="이중 슬라이드 구현 코드">
+                                            <figcaption>  Js <br> setInterval을 사용하여 이중슬라이드 구현
+                                                </figcaption>
                                         </figure>
                                     </div>
                                 </div>
@@ -629,18 +642,18 @@
                                 </p>
 
                                 <div class="infant-care-img-wrapper">
-                                    <figure">
-                                        <img src="" alt="infant-care 카테고리 영역 사진">
+                                    <figure>
+                                        <img src="img/infant-category.png" alt="infant-care 카테고리 영역 사진">
                                         <figcaption>타자가 쳐서 나오는 듯한 효과 / 카테고리 색 변화 효과 구현</figcaption>
                                     </figure>
                                   
                                     <div class="infant-care-code">
                                         <figure>
-                                            <img src="" alt="타자 치는 효과 설명 코드">
+                                            <img src="img/infant-category-ex1.png" alt="타자 치는 효과 설명 코드">
                                             <figcaption>Js <br> 배열과 split함수를 사용하여 타자치는 효과 구현</figcaption>
                                         </figure>
                                         <figure>
-                                            <img src="" alt="카테고리 색 변화하는 효과 코드">
+                                            <img src="img/infant-category-ex2.png" alt="카테고리 색 변화하는 효과 코드">
                                             <figcaption> Js <br>
                                                 Math함수와 이중반복문(중복수 제외를 위해)을 사용하여  <br>
                                                 카테고리 불켜기 효과 구현</figcaption>
@@ -665,6 +678,67 @@
                 </figure>
             </div>
         </div>
+    </section>
+
+    <section id="contact">
+        <div class="file-container">
+            <div class="contact-file-name">
+                <div class="contact-name">
+                    <figure>
+                        <img src="img/🦆 icon _folder_.png" alt="폴더 아이콘">
+                    </figure>
+                    <h4>.contact</h4>
+                </div>
+                <figure>
+                    <img src="img/X.png" alt="esc표시">
+                </figure>
+            </div>
+            <div class="contact-file-contents-background">
+                <div class="contact-index-wrapper">
+                    <div class="contact-index">
+                        <p>전규리</p>
+                    </div>
+                    <div class="contact-index-transparent"></div>
+                    <div class="contact-index-transparent"></div>
+                </div>
+                <div class="contact-contents-background">
+                    <div class="contact-name-wrapper">
+                        <div class="figure">
+                            <img src="img/gyuri-img.jpg" alt="전규리 사진">
+                        </div>
+                        <div class="gyulee-name-wrapper">
+                            <p>. JEON GYU LEE</p>
+                        </div>
+                    </div>
+                    <div class="contact-tel-mail-sns">
+                        <div class="way-contact">
+                            <p>Tel :</p>
+                            <p>mail :</p>
+                            <p>instagram</p>
+                        </div>
+                        <div class="way-contact-contents">
+                            <p>010.3516.5810</p>
+                            <p>0108503@gmail.com</p>
+                            <p>ten_guin</p>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <div class="send-mail">
+                            <p>이메일 보내기</p>
+                        </div>
+                        <div class="send-mail-contents">
+                            <p>끊임없이 도전하는 퍼블리셔를 찾으신다면</p>
+                            <div class="click-wrapper">
+                                <p>클릭해 주세요</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>메일을 보내주시면 3일 내로 답장을 드리겠습니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <p>© 2022. Gyuri All rights reserved.</p>
     </section>
 
 </body>

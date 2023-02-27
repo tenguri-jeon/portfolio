@@ -1,0 +1,285 @@
+:root{
+    /* color */
+    --main-white-color: #fff;
+    --main-khaki-color: #6c8e6a;
+    --main-green-color: #8eb48b;
+    --main-red-color: #cd4444;
+    --main-red-color2: #9a1e2f;
+    --main-blue-color: #4473cd;
+    --main-gray-color: #a4a4a4;
+    --main-gray-color2: #d9d9d9;
+    --main-black-color: #414141;
+
+    /* container-size */
+    --container-size : 1200px
+}
+
+/* .unit-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+} */
+
+header{
+    display: flex;
+    align-items: center;
+    max-width: var(--container-size);
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h1 > a {
+    font-size: 36px;
+    color: var(--main-black-color);
+}
+
+nav a{
+ color: var(--main-khaki-color);
+ margin: 8px;
+}
+
+#main{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 80px;
+}
+
+.gyufle span{
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.g{
+    color: #6e97d0;
+}
+
+.y{
+    color: #f1625b;
+}
+
+.u{
+    color: #e4c733;
+}
+
+.second-g{
+    color: #6e97d0;
+}
+
+.l{
+    color:#64B281
+}
+
+.e{
+    color: #E5696E;
+}
+
+
+.searh-area{
+    border: 2px solid var(--main-khaki-color);
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    margin: 0 auto;
+    width: 600px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-name{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.search-name-wrapper{
+    color: var(--main-khaki-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.search-icon{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.close-here{
+    width: 25px;
+    height: 25px;
+}
+
+.explane-me{
+    margin: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.explane-me figure{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.underline:after{
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1.5px;
+    background-color: var(--main-khaki-color);
+    margin: 0 auto;
+}
+
+.scroll-down{
+    color: var(--main-khaki-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.down-arrow{
+    height: 15px;
+    width: 15px;
+    border-bottom: 2px solid var(--main-khaki-color);
+    border-left: 2px solid var(--main-khaki-color);
+    transform: rotate(-45deg);
+    display: inline;
+}
+
+#profile{
+    height: 100vh;
+    width: 100vw;
+}
+
+.file-container{
+    max-width: var(--container-size);
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.index-area{
+    display: flex;
+}
+
+.profile-file{
+    background-color: var(--main-khaki-color);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.search-ing{
+    width: 328px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: var(--main-white-color);
+}
+
+.searching{
+    color: var(--main-khaki-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.introduce-card-box{
+    display: flex;
+    gap: 20px;
+}
+
+.introduce{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-basis: 30%;
+}
+
+.hobby-contents{
+    width: 90px;
+}
+
+.my-profile{
+    flex-basis: 30%;
+}
+
+.my-profile figure{
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.introduce-card{
+    flex-basis: 70%;
+}
+
+.name h2{
+    color: var(--main-white-color);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 8px;
+}
+.name p{
+    color: var(--main-white-color);
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.introduce-card{
+    background-color: var(--main-white-color);
+    border-radius: 8px;
+    padding: 36px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.introduce-my-self{
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid var(--main-khaki-color);
+    padding-left: 16px;
+    gap: 8px;
+}
+
+.introduce-my-self p {
+    color: var(--main-khaki-color);
+    font-weight: bold;
+    line-height: 150%;
+}
+
+.introduce-hi{
+    font-size: 18px;
+    color: var(--main-khaki-color);
+    font-weight: bold;
+}
+
+.profile-gradu-cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-card{
+    background-color: var(--main-white-color);
+    padding: 16px;
+}
+
+.gradu-card{
+    background-color: var(--main-white-color);
+    padding: 16px;
+    
+}
+
+.hobby-card-content{
+    display: flex;
+}
