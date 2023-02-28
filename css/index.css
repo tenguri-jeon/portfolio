@@ -163,7 +163,7 @@ nav a{
 }
 
 #profile{
-    /* height: 100vh; */
+    height: 100vh;
     width: 100vw;
 }
 
@@ -171,6 +171,7 @@ nav a{
     max-width: var(--container-size);
     margin: 0 auto;
     padding: 32px;
+    height: 100vh;
 }
 
 .index-area{
@@ -515,10 +516,17 @@ nav a{
     background-color: var(--main-white-color);
     padding: 20px;
     border-radius: 8px;
+    
 }
 
-.workout-infant-container{
+.workout-1-wrapper{
     display: flex;
+    flex-direction: column;
+    gap: 180px;
+}
+
+.workout-HBAF-container{
+
 }
 
 .workout-infant-container figure{
@@ -528,3 +536,125 @@ nav a{
 .infant-text{
     width: 100%;
 }
+
+.hbaf-top-explane{
+    display: flex;
+    gap: 16px;
+}
+
+.hbaf-top-explane figure{
+    flex-basis: 50%;
+}
+
+.hbaf-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hbaf-text h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-blue-color);
+    margin-bottom: 24px;
+}
+
+.hbaf-text-wrapper{
+    margin-bottom: 24px;
+}
+
+.hbaf-text p{
+    color: var(--main-blue-color);
+    font-weight: bold;
+    line-height: 150%;
+}
+
+.hbaf-tag{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.hbaf-tag div{
+    border: 1px solid var(--main-blue-color);
+    border-radius: 16px;
+}
+
+.hbaf-tag p{
+    padding: 5px 10px;
+}
+
+.view{
+    background-color: var(--main-blue-color);
+    display: inline-block;
+    border-radius: 16px;
+    color: var(--main-white-color);
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+}
+
+.hbaf-code > .hbaf-introduce{
+    margin-bottom: 36px;
+}
+
+.hbaf-folder{
+    font-size: 30px;
+    color: var(--main-blue-color);
+    font-weight: bold;
+}
+
+.hbaf-introduce p{
+    font-weight: bold;
+    line-height: 150%;
+    margin-top: 16px;
+}
+
+.code-explane-img-container{
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.hbaf-animation-code-img-wrapper{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--main-black-color);
+    margin-top: 8px;
+}
+
+.hbaf-code{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.intro-animation-img-wrppaer figure{
+    max-width: 370px;
+}
+
+.hbaf-img-wrapper{
+    display: flex;
+}
+
+
+
+
+#contact{
+    display: none;
+}
+
+
+
