@@ -8,6 +8,8 @@
     --main-blue-color: #4473cd;
     --main-gray-color: #a4a4a4;
     --main-gray-color2: #d9d9d9;
+    --contact-gray-color: #dedede;
+    --contact-click-color: #eeecec;
     --main-black-color: #414141;
 
     /* container-size */
@@ -51,11 +53,59 @@ nav a{
     width: 100vw;
     height: 100vh;
     gap: 80px;
+    
+}
+
+.ball-wrapper{
+    width: 140px;
+    height: 300px;
+    margin: -150px 0 0 -70px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#ball{
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    background: linear-gradient(350deg, #248f17, #ffffff);
+    box-shadow: inset 0 -5px 15px rgb(255 255 255 / 50%), inset -2px -1px 40px #26603c, 0 0 1px #ffffff;
+    position: relative;
+    animation: jump 1s ;
+    animation-iteration-count: 3;
+    
+}
+
+#ball::after {
+	content: "";
+	width: 80px; 
+	height: 40px; 
+	position: absolute;
+	left: 30px;
+	top: 10px;	
+	background-color: linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+	border-radius: 40px / 20px;	
+}
+
+#ballshadow {
+	width: 60px;
+	height: 75px;
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -30px;
+	background: rgba(20, 20, 20, .1);
+	box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+	border-radius: 30px / 40px;	
+    animation: shrink 1s ;
+    animation-iteration-count: 3;
 }
 
 .gyufle span{
     font-size: 100px;
     font-weight: bold;
+    display: none;
 }
 
 .g{
@@ -89,10 +139,17 @@ nav a{
     border-radius: 30px;
     margin: 0 auto;
     width: 600px;
+    height: 40px;
     padding: 8px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    overflow: hidden;
+    animation-name: searching;
+    animation-duration: 2s;
+    transition: 0.5s;
+    animation-fill-mode: both;
+    display: none;
 }
 
 .search-name{
@@ -171,7 +228,6 @@ nav a{
     max-width: var(--container-size);
     margin: 0 auto;
     padding: 32px;
-    height: 100vh;
 }
 
 .index-area{
@@ -217,6 +273,9 @@ nav a{
 
 .about-me{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .my-profile{
@@ -366,10 +425,10 @@ nav a{
 }
 
 .hobby-contents figure{
-    background-color: #6c8e6a;
     border-radius: 100%;
     width: 90px;
     margin-bottom: 8px;
+    overflow: hidden;
 }
 
 .hobby-contents p{
@@ -425,6 +484,7 @@ nav a{
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 228px;
 }
 
 .skills-img-bar-wrapper{
@@ -445,11 +505,15 @@ nav a{
     overflow: hidden;
 }
 
+
+
 .skills-explane{
+    visibility: hidden;
     margin-top: 16px;
     background-color: var(--main-red-color);
     padding: 10px;
     border-radius: 8px;
+    transition: 0.5s;
 }
 
 .skills-explane p{
@@ -457,6 +521,26 @@ nav a{
     line-height: 150%;
     font-weight: bold;
     font-size: 14px;
+}
+
+.html:hover .html-hover {
+    visibility: visible;
+}
+
+.css:hover .css-exaplne{
+    visibility: visible;
+}
+
+.js:hover .js-exaplne{
+    visibility: visible;
+}
+
+.photo:hover .photo-exaplne{
+    visibility: visible;
+}
+
+.ill:hover .ill-exaplne{
+    visibility: visible;
 }
 
 .html-bar{
@@ -516,17 +600,24 @@ nav a{
     background-color: var(--main-white-color);
     padding: 20px;
     border-radius: 8px;
-    
+    position: relative;
 }
 
-.workout-1-wrapper{
+.workout-overflow-container{
+    overflow: hidden;
+    height: 740px;
+    max-width: 1100px;
+    /* js로 height조정해줘야함 */
+}
+
+.workout-wrapper{
     display: flex;
-    flex-direction: column;
-    gap: 180px;
 }
 
-.workout-HBAF-container{
-
+.work-out-explane{
+    width: 1140px;
+    flex-shrink: 0;
+    /* js로 넓이 지정해줘야함 */
 }
 
 .workout-infant-container figure{
@@ -537,53 +628,58 @@ nav a{
     width: 100%;
 }
 
-.hbaf-top-explane{
+.portfolio-main-explane{
     display: flex;
     gap: 16px;
+    justify-content: center;
+    padding: 160px 0px;
 }
 
-.hbaf-top-explane figure{
+.portfolio-main-explane figure{
     flex-basis: 50%;
 }
 
-.hbaf-text{
+.workout-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    flex-basis: 50%;
 }
 
-.hbaf-text h3{
+.workout-text h3{
     font-size: 18px;
     font-weight: bold;
     color: var(--main-blue-color);
     margin-bottom: 24px;
 }
 
-.hbaf-text-wrapper{
+.workout-text-wrapper{
     margin-bottom: 24px;
 }
 
-.hbaf-text p{
+.workout-text p{
     color: var(--main-blue-color);
     font-weight: bold;
     line-height: 150%;
 }
 
-.hbaf-tag{
+.workout-tag{
     display: flex;
     gap: 8px;
     margin-bottom: 16px;
+    flex-wrap: wrap;
 }
 
-.hbaf-tag div{
+.workout-tag div{
     border: 1px solid var(--main-blue-color);
     border-radius: 16px;
 }
 
-.hbaf-tag p{
+.workout-tag p{
     padding: 5px 10px;
 }
+
 
 .view{
     background-color: var(--main-blue-color);
@@ -595,11 +691,15 @@ nav a{
     text-align: center;
 }
 
-.hbaf-code > .hbaf-introduce{
+.code-container > .hbaf-introduce{
     margin-bottom: 36px;
 }
 
-.hbaf-folder{
+.code-container figure{
+    width: 351px;
+}
+
+.folder-main-text{
     font-size: 30px;
     color: var(--main-blue-color);
     font-weight: bold;
@@ -611,15 +711,20 @@ nav a{
     margin-top: 16px;
 }
 
+.infant-care-introduce p{
+    font-weight: bold;
+    line-height: 150%;
+    margin-top: 16px;
+}
+
 .code-explane-img-container{
     margin-top: 64px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 24px;
 }
 
 .hbaf-animation-code-img-wrapper{
-    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -634,7 +739,7 @@ figcaption{
     margin-top: 8px;
 }
 
-.hbaf-code{
+.code-container{
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
@@ -649,12 +754,352 @@ figcaption{
     display: flex;
 }
 
-
-
-
-#contact{
-    display: none;
+.folder{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.folder span{
+    color: var(--main-blue-color);
+    font-weight: bold;
+}
 
+.arrow-area{
+    border-bottom: 2px solid var(--main-blue-color);
+    border-left: 2px solid var(--main-blue-color);
+}
 
+.goto-workout-2{
+    width: 119px;
+    height: 80px;
+    position: absolute;
+    right: -7%;
+    bottom: 20%;
+    z-index: -1;
+}
+
+.goto-workout-1{
+    width: 119px;
+    height: 80px;
+    position: absolute;
+    right: -7%;
+    bottom: 23%;
+    z-index: 0;
+}
+
+.contact-file-name{
+    background-color: var(--main-white-color);
+    border: 1px solid var(--contact-gray-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+.contact-name{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 16px;
+}
+
+.contact-name h4{
+    font-size: 40px;
+    color: var(--main-gray-color);
+    font-weight: bold;
+}
+
+.contact-name figure{
+    width: 25px;
+    height: 25px;
+}
+
+.contact-file-contents-background{
+    background-color: var(--contact-gray-color);
+    padding: 20px;
+}
+
+.contact-index-wrapper{
+    display: flex;
+    gap: 2px;
+}
+
+.contact-index{
+    padding: 10px;
+    width: 130px;
+    background-color: var(--contact-click-color);    
+}
+
+.contact-index p {
+    color: var(--main-gray-color);
+}
+
+.contact-index-color{
+    background-color: var(--main-white-color);
+}
+
+.contact-gyulee-img{
+    width: 170px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-contents-background{
+    background-color: var(--main-white-color);
+    padding: 60px;
+}
+
+.contact-name-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 2px solid var(--main-gray-color2);
+    padding-bottom: 24px;
+}
+
+.gyulee-name-wrapper{
+    border: 1px solid var(--main-gray-color2);
+    padding: 10px;
+    width: 100%;
+}
+
+.contact-tel-mail-sns{
+    display: flex;
+    gap: 64px;
+    padding-top: 16px;
+    border-bottom: 2px solid var(--main-gray-color2);
+}
+
+.contact-tel-mail-sns p {
+    margin-bottom: 16px;
+}
+
+.characteristic{
+    display: flex;
+    gap: 64px;
+    padding: 24px 0px;
+}
+
+.characteristic-text{
+    flex-shrink: 0;
+}
+
+.copyright{
+    text-align: center;
+    padding: 64px 0px;
+}
+
+@keyframes searching{
+    0%{
+        height: 40px;
+    }
+
+    100%{
+        height: 256px;
+    }
+}
+
+@keyframes jump {
+	0% {
+		top: 0;
+	}
+	50% {
+		top: 140px;
+		height: 140px;
+	}
+	55% {
+		top: 160px; 
+		height: 120px; 
+		border-radius: 70px / 60px;
+	}
+	65% {
+		top: 120px; 
+		height: 140px; 
+		border-radius: 70px;
+	}
+	95% {
+		top: 0;
+	}
+	100% {
+		top: 0;
+	}
+}
+
+@keyframes shrink {
+	0% {
+		bottom: 0;
+		margin-left: -30px;
+		width: 60px;
+		height: 75px;
+		background: rgba(20, 20, 20, .1);
+		box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+		border-radius: 30px / 40px;
+	}
+	50% {
+		bottom: 30px;
+		margin-left: -10px;
+		width: 20px;
+		height: 5px;
+		background: rgba(20, 20, 20, .3);
+		box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+		border-radius: 20px / 20px;
+	}
+	100% {
+		bottom: 0;
+		margin-left: -30px;
+		width: 60px;
+		height: 75px;
+		background: rgba(20, 20, 20, .1);
+		box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+		border-radius: 30px / 40px;
+	}
+}
+
+@media screen and (max-width:834px) {
+    .introduce-card-box{
+        flex-direction: column;
+    }
+
+    .introduce{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .my-profile{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-basis: 50%;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    .introduce-card{
+        flex-basis: 50%;
+    }
+
+    .my-profile figure{
+        height: unset;
+    }
+
+    #profile{
+        height: unset;
+        width: unset;
+    }
+
+    .portfolio-main-explane{
+        padding: unset;
+        flex-direction: column;
+    }
+
+    .code-explane-img-container{
+        flex-direction: column;
+    }
+
+    .code-explane-img-container{
+        flex-direction: column;
+    }
+
+    .code-explane-img-container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:360px) {
+    
+    #main{
+        padding: 0px 16px;
+        box-sizing: border-box;
+    }
+    
+    .gyufle span{
+        font-size: 50px;
+    }
+
+    .searh-area{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .file-container{
+        padding: unset
+    }
+
+    .profile-file{
+        padding: 24px 16px;
+        border-radius: 0px 0px 8px 8px;
+       margin-bottom: 256px;
+    }
+
+    .introduce{
+        flex-direction: column;
+    }
+
+    .profile-gradu-cards{
+        flex-direction: column;
+    }
+
+    .profile-card{
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .gradu-card{
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .hobby-card-content{
+        flex-direction: column;
+    }
+
+    #skills{
+        padding-bottom: 256px;
+    }
+
+    .workout-background{
+        padding: 16px;
+    }
+
+    .workout-container{
+        padding: 16px;
+    }
+
+    .workout-overflow-container{
+        width: 296px;
+    }
+
+    #workout{
+        padding-bottom: 256px;
+    }
+
+    .contact-name{
+        margin-left: unset;
+    }
+
+    .contact-name h4{
+        font-size: 24px;
+    }
+
+    .contact-file-name{
+        padding: 8px 16px;
+    }
+
+    .contact-index{
+        width: 108px;
+        box-sizing: border-box;
+    }
+
+    .contact-file-contents-background{
+        padding: 16px;
+    }
+
+    .contact-contents-background{
+        padding: 16px;
+    }
+
+    .characteristic-contents{
+        line-height: 150%;
+    }
+}
