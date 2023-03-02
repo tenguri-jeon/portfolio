@@ -228,6 +228,7 @@ nav a{
     max-width: var(--container-size);
     margin: 0 auto;
     padding: 32px;
+    position: relative;
 }
 
 .index-area{
@@ -596,16 +597,25 @@ nav a{
     display: flex;
 }
 
+.workout-index {
+    filter: brightness(0.8);
+}
+
+.pick-index {
+    filter: none;
+}
+
 .workout-container{
     background-color: var(--main-white-color);
     padding: 20px;
     border-radius: 8px;
     position: relative;
+    z-index: 1;
 }
 
 .workout-overflow-container{
     overflow: hidden;
-    height: 740px;
+    height: 650px;
     max-width: 1100px;
     /* js로 height조정해줘야함 */
 }
@@ -617,7 +627,13 @@ nav a{
 .work-out-explane{
     width: 1140px;
     flex-shrink: 0;
+    display: none;
     /* js로 넓이 지정해줘야함 */
+}
+
+.workout-display{
+    display: block;
+    /* js로 안보이는 부분은 display none처리 해주면 됨 */
 }
 
 .workout-infant-container figure{
@@ -692,7 +708,8 @@ nav a{
 }
 
 .code-container > .hbaf-introduce{
-    margin-bottom: 36px;
+    margin-bottom: 128px;
+    margin-top: 64px;
 }
 
 .code-container figure{
@@ -722,6 +739,7 @@ nav a{
     display: flex;
     justify-content: center;
     gap: 24px;
+    margin-bottom: 128px;
 }
 
 .hbaf-animation-code-img-wrapper{
@@ -759,6 +777,11 @@ figcaption{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 16px;
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .folder span{
@@ -766,28 +789,47 @@ figcaption{
     font-weight: bold;
 }
 
+.folder-arrow{
+    border-bottom: 2px solid var(--main-blue-color);
+    border-left: 2px solid var(--main-blue-color);
+}
+
 .arrow-area{
     border-bottom: 2px solid var(--main-blue-color);
     border-left: 2px solid var(--main-blue-color);
 }
 
-.goto-workout-2{
-    width: 119px;
-    height: 80px;
+.goto-workout-wrapper{
     position: absolute;
-    right: -7%;
-    bottom: 20%;
-    z-index: -1;
+    right: 0;
+    bottom: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.goto-workout-2{
+    width: 90px;
+    position: relative;
+    z-index: 1;
 }
 
 .goto-workout-1{
-    width: 119px;
-    height: 80px;
-    position: absolute;
-    right: -7%;
-    bottom: 23%;
-    z-index: 0;
+    width: 90px;
+    position: relative;
+    z-index: 1;
 }
+
+.goto-workout-display{
+    display: none;
+    /* 인덱스 클릭시 안보이게 하기 위한 클레스 */
+}
+
+.back-index{
+    z-index: -1;
+}
+
+
 
 .contact-file-name{
     background-color: var(--main-white-color);
@@ -891,6 +933,11 @@ figcaption{
     padding: 64px 0px;
 }
 
+.top-workout-index-display{
+    display: none;
+    /* 위에있는 워크아웃 보였다 안보였다 하는 클래스 */
+}
+
 @keyframes searching{
     0%{
         height: 40px;
@@ -957,6 +1004,14 @@ figcaption{
 	}
 }
 
+@media screen and (max-width:1200px) {
+    
+    .workout-overflow-container{
+        height: 630px;
+    }
+
+}
+
 @media screen and (max-width:834px) {
     .introduce-card-box{
         flex-direction: column;
@@ -991,6 +1046,7 @@ figcaption{
     .portfolio-main-explane{
         padding: unset;
         flex-direction: column;
+        padding: 64px 0px;
     }
 
     .code-explane-img-container{
@@ -1003,6 +1059,20 @@ figcaption{
 
     .code-explane-img-container{
         flex-direction: column;
+    }
+
+    .workout-overflow-container{
+        height: 812px;
+    }
+}
+
+@media screen and (max-width:670px) {
+    .workout-overflow-container{
+        height: 737px;
+    }
+
+    .portfolio-main-explane{
+        padding: 64px 0px;
     }
 }
 

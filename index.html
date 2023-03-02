@@ -356,14 +356,8 @@
                         <div class="green"></div>
                     </div>
                     <div class="workout1-index-wrapper">
-                        <div class="workout-1-img">
-                            <figure class="workout1-index"><img src="img/work-out.png" alt="workout1"></figure>
-                            <figure class="workout1-index-transparent"><img src="img/workout1-ttansparent.png" alt="workout1-transparent"></figure>
-                        </div>
-                        <div class="workout-2-img-wrapper">
-                            <figure class="workout2-index"><img src="img/topworkout2-index.png" alt="workout2"></figure>
-                            <figure class="workout2-index-transparent"><img src="img/workout2-transparent.png" alt="workout2-transparent"></figure>
-                        </div>
+                        <figure class="workout-index pick-index"><img src="img/work-out.png" alt="workout1"></figure>
+                        <figure class="workout-index"><img src="img/topworkout2-index.png" alt="workout2"></figure>
                     </div>
                 </div>
 
@@ -371,7 +365,7 @@
                     <div class="workout-overflow-container"> 
                         <!-- 위에껀 넘겨야 할 슬라이드 크기 조정 컨테이너임 -->
                         <ul class="workout-wrapper">
-                            <li class="work-out-explane hbaf">
+                            <li class="work-out-explane hbaf  workout-display">
                                 <div class="portfolio-main-explane">
                                     <figure>
                                         <img src="img/HBAF-ex-img.png" alt="바프 목업 작업">
@@ -394,6 +388,8 @@
                                             View
                                         </a>
                                     </div>
+
+                                    
                                 </div>
                             
 
@@ -526,7 +522,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <!-- 화살표 묶어두기 -->
                                     <div class="folder">
                                         <span>접어두기</span>
                                         <div class="down-arrow arrow-area"></div>
@@ -673,14 +669,18 @@
                             </li>
                         </ul>
                     </div> 
-                    <figure class="goto-workout-2">
-                        <img src="img/workout2-index.png" alt="2번째 포트폴리오 넘기기 인덱스">
-                    </figure>
-                    <figure class="goto-workout-1">
-                        <img src="img/workout1-index.png" alt="1번째 포트폴리오 넘기기 인덱스">
-                    </figure>
                 </div>
             </div>
+            
+            <div class="goto-workout-wrapper">
+                <figure class="goto-workout-2">
+                    <img src="img/workout2-index.png" alt="2번째 포트폴리오 넘기기 인덱스">
+                </figure>
+                <figure class="goto-workout-1">
+                    <img src="img/workout1-index.png" alt="1번째 포트폴리오 넘기기 인덱스">
+                </figure>
+            </div>
+
         </div>
     </section>
 
@@ -749,5 +749,6 @@
     </section>
 
     <script src="js/size.js"></script>
+    <script src="js/workout.js"></script>
 </body>
 </html>
