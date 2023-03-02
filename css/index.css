@@ -58,7 +58,7 @@ nav a{
 
 .ball-wrapper{
     width: 140px;
-    height: 300px;
+    height: 20%;
     margin: -150px 0 0 -70px;
     margin: 0 auto;
     position: relative;
@@ -68,13 +68,79 @@ nav a{
     width: 140px;
     height: 140px;
     border-radius: 70px;
+    position: absolute;
+    animation: jump 1s ;
+    animation-iteration-count: 3;   
+}
+
+#ball div{
+    width: 140px;
+    height: 140px;
+    z-index: 10;
+    position: absolute;
     background: linear-gradient(350deg, #248f17, #ffffff);
     box-shadow: inset 0 -5px 15px rgb(255 255 255 / 50%), inset -2px -1px 40px #26603c, 0 0 1px #ffffff;
-    position: relative;
-    animation: jump 1s ;
-    animation-iteration-count: 3;
-    
+    border-radius: 50%;
 }
+
+.ball-text{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 60px;
+    font-weight: bold;
+}
+
+
+
+#ball .g{
+    animation: g 2.5s cubic-bezier(0.415, 0.547, 0, 0.809);;
+
+}
+
+#ball .y{
+    animation: y 2.5s cubic-bezier(0.415, 0.547, 0, 0.809);;
+}
+
+#ball .u{
+    animation: u 2.5s cubic-bezier(0.415, 0.547, 0, 0.809);;
+}
+
+#ball .second-g{
+    animation: second-g 2.5s cubic-bezier(0.415, 0.547, 0, 0.809);;
+}
+
+#ball .l{
+    animation: l 2.5s cubic-bezier(0.415, 0.547, 0, 0.809);;
+}
+
+#ball .e{
+    animation: e 2.5s cubic-bezier(0.415, 0.547, 0, 0.809);;
+}
+
+
+.top{
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
+    animation: clip-top 2.5s;
+}
+
+.left{   
+    clip-path: polygon(50% 50%, 0 0, 0 100%);  
+    animation: clip-left 2.5s;
+}
+
+.right{
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+    animation: clip-right 2.5s;
+}
+
+.bottom{
+    clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+    animation: clip-bottom 2.5s;
+}
+
+
 
 #ball::after {
 	content: "";
@@ -617,7 +683,11 @@ nav a{
     overflow: hidden;
     height: 650px;
     max-width: 1100px;
-    /* js로 height조정해줘야함 */
+    transition: 0.5s;
+}
+
+.workout-height-unset{
+    height: unset;
 }
 
 .workout-wrapper{
@@ -628,7 +698,6 @@ nav a{
     width: 1140px;
     flex-shrink: 0;
     display: none;
-    /* js로 넓이 지정해줘야함 */
 }
 
 .workout-display{
@@ -794,9 +863,31 @@ figcaption{
     border-left: 2px solid var(--main-blue-color);
 }
 
+.folder-arrow:first-child{
+    position: absolute;
+    top: 30%;
+
+}
+
+.folder-arrow-container{
+    width: 15px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
 .arrow-area{
     border-bottom: 2px solid var(--main-blue-color);
     border-left: 2px solid var(--main-blue-color);
+}
+
+.folder-arrow-click{
+    flex-direction: column-reverse;
+}
+
+.folder.folder-arrow-click .folder-arrow-container{
+    transform: translate(180deg);   
 }
 
 .goto-workout-wrapper{
@@ -808,13 +899,7 @@ figcaption{
     gap: 8px;
 }
 
-.goto-workout-2{
-    width: 90px;
-    position: relative;
-    z-index: 1;
-}
-
-.goto-workout-1{
+.goto-workout{
     width: 90px;
     position: relative;
     z-index: 1;
@@ -826,7 +911,9 @@ figcaption{
 }
 
 .back-index{
-    z-index: -1;
+    z-index: 0;
+    filter: brightness(0.8);
+    /* z-index */
 }
 
 
@@ -948,7 +1035,7 @@ figcaption{
     }
 }
 
-@keyframes jump {
+/* @keyframes jump {
 	0% {
 		top: 0;
 	}
@@ -971,6 +1058,32 @@ figcaption{
 	}
 	100% {
 		top: 0;
+	}
+} */
+
+@keyframes jump {
+	0% {
+		bottom: 0;
+	}
+	50% {
+		bottom: 140px;
+		height: 140px;
+	}
+	55% {
+		bottom: 160px; 
+		height: 120px; 
+		border-radius: 70px / 60px;
+	}
+	65% {
+		bottom: 120px; 
+		height: 140px; 
+		border-radius: 70px;
+	}
+	95% {
+		bottom: 0;
+	}
+	100% {
+		bottom: 0;
 	}
 }
 
@@ -1002,6 +1115,84 @@ figcaption{
 		box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
 		border-radius: 30px / 40px;
 	}
+}
+
+@keyframes clip-top{
+    0% {transform:translateY(0px);}
+    50% {transform:translateY(-150px);}
+    100% {
+        transform:translateY(-150px);    
+        opacity: 0;
+    }
+  }
+
+  @keyframes clip-left{
+    0% {transform:translateX(0px)}
+    50% {transform:translateX(-150px)}
+    100% {
+        transform:translateX(0px);    
+        }
+  }
+
+  @keyframes clip-top{
+    0% {transform:translateY(0px);}
+    50% {transform:translateY(-150px);}
+    100% {
+        transform:translateY(0px);    
+        }
+  }
+
+  @keyframes clip-bottom{
+    0% {transform:translateY(0px)}
+    50% {transform:translateY(150px)}
+    100% {
+        transform:translateY(0px);    
+        }
+  }
+
+  @keyframes clip-right {
+    0% {transform:translateX(0px)}
+    50% {transform:translateX(150px)}
+    100% {
+        transform:translateX(0px);    
+        }
+  }
+
+  
+@keyframes e {
+    0% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+    50% {transform:translateX(60px) translateY(70px) scale(1) rotateZ(155deg)}
+    100% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+  }
+
+@keyframes y {
+  0% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+  50% {transform:translateX(-50px) translateY(50px) scale(1) rotateZ(90deg)}
+  100% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+}
+
+@keyframes g {
+    0% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+    50% {transform:translateX(-80px) translateY(-60px) scale(1) rotateZ(135deg)}
+    100% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+  }
+
+@keyframes u {
+  0% {transform:translateX(0) translateY(0) scale(0)}
+  50% {transform:translateX(70px) translateY(-80px) scale(1)}
+  100% {transform:translateX(0) translateY(0) scale(0)}
+}
+
+@keyframes second-g {
+    0% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+    50% {transform:translateX(-100px) translateY(140px) scale(1) rotateZ(-90deg)}
+    100% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+  }
+
+@keyframes l {
+  0% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
+  50% {transform:translateX(100px) translateY(140px) scale(1) rotateZ(-270deg)}
+  100% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
 }
 
 @media screen and (max-width:1200px) {

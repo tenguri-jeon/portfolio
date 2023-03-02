@@ -27,7 +27,19 @@
     <section id="main">
         
         <div class="ball-wrapper">
-            <div id="ball"></div>
+            <div id="ball">
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+
+                <span class="ball-text g">G</span>
+                <span class="ball-text y">y</span>
+                <span class="ball-text u">u</span>
+                <span class="ball-text second-g">g</span>
+                <span class="ball-text l">l</span>
+                <span class="ball-text e">e</span>                
+            </div>
             <div id="ballshadow"></div>
         </div>
         <!-- https://tympanus.net/codrops/2012/05/22/creating-an-animated-3d-bouncing-ball-with-css3/ -->
@@ -522,11 +534,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 화살표 묶어두기 -->
+
                                     <div class="folder">
                                         <span>접어두기</span>
-                                        <div class="down-arrow arrow-area"></div>
-                                        <div class="down-arrow arrow-area"></div>
+                                        <div class="folder-arrow-container">
+                                            <div class="down-arrow folder-arrow"></div>
+                                            <div class="down-arrow folder-arrow"></div>
+                                        </div>
                                     </div>
                                 </div>
                              </li>
@@ -662,8 +676,10 @@
                                     </div>
                                     <div class="folder">
                                         <span>접어두기</span>
-                                        <div class="down-arrow folder-arrow"></div>
-                                        <div class="down-arrow folder-arrow"></div>
+                                        <div class="folder-arrow-container">
+                                            <div class="down-arrow folder-arrow"></div>
+                                            <div class="down-arrow folder-arrow"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -673,11 +689,11 @@
             </div>
             
             <div class="goto-workout-wrapper">
-                <figure class="goto-workout-2">
-                    <img src="img/workout2-index.png" alt="2번째 포트폴리오 넘기기 인덱스">
+                <figure class="goto-workout ">
+                    <img src="img/workout1-index.png " alt="1번째 포트폴리오 넘기기 인덱스">
                 </figure>
-                <figure class="goto-workout-1">
-                    <img src="img/workout1-index.png" alt="1번째 포트폴리오 넘기기 인덱스">
+                <figure class="goto-workout back-index ">
+                    <img src="img/workout2-index.png" alt="2번째 포트폴리오 넘기기 인덱스">
                 </figure>
             </div>
 
