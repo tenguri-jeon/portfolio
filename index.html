@@ -24,14 +24,14 @@
         </nav>
     </header>
 
-    <section id="main">
+    <section id="main" class="center">
         
         <div class="ball-wrapper">
             <div id="ball">
-                <div class="top"></div>
-                <div class="left"></div>
-                <div class="right"></div>
-                <div class="bottom"></div>
+                <div class="ball top"></div>
+                <div class="ball left"></div>
+                <div class="ball right"></div>
+                <div class="ball bottom"></div>
 
                 <span class="ball-text g">G</span>
                 <span class="ball-text y">y</span>
@@ -44,7 +44,7 @@
         </div>
         <!-- https://tympanus.net/codrops/2012/05/22/creating-an-animated-3d-bouncing-ball-with-css3/ -->
 
-        <div class="gyufle">
+        <div class="gyufle ball-display">
             <span class="g">G</span>
             <span class="y">y</span>
             <span class="u">u</span>
@@ -52,7 +52,7 @@
             <span class="l">l</span>
             <span class="e">e</span>
         </div>
-        <div class="searh-area">
+        <div class="searh-area ball-display">
             <div class="search-name">
                 <div class="search-name-wrapper">
                     <figure class="search-icon">
@@ -100,11 +100,13 @@
             </div>
         </div>
 
-        <div class="scroll-down">
+        <div class="scroll-down ball-display">
             <p>scroll down</p>
-            <div class="down-arrow">
-            </div>
-            <div class="down-arrow">
+            <div class="down-arrow-wrapper">
+                <div class="down-arrow">
+                </div>
+                <div class="down-arrow">
+                </div>
             </div>
         </div>
     </section>
@@ -247,6 +249,7 @@
             <div class="skills-background-container">
                 <div class="skills-contents-container">
                     <h3>skills</h3>
+                    <p class="hover-img">이미지를 호버 해보세요</p>
                     <div class="skills-contents-wrapper">
 
                         <div class="skill html">
@@ -255,8 +258,8 @@
                                     <img src="img/HTML5_logo.png" alt="HTML마크">
                                 </figure>
                                 <div class="bar-warpper">
-                                    <div class="whole-bar">
-                                        <div class="bar html-bar">
+                                    <div class="bar html-bar">
+                                            <div class="whole-bar">
                                         </div>
                                     </div>
                                 </div>
@@ -274,8 +277,8 @@
                                     <img src="img/css3_logo.png" alt="css마크">
                                 </figure>
                                 <div class="bar-warpper">
-                                    <div class="whole-bar">
-                                        <div class="bar css-bar">
+                                    <div class="bar css-bar">
+                                            <div class="whole-bar">
                                         </div>
                                     </div>
                                 </div>
@@ -292,8 +295,8 @@
                                     <img src="img/js_logo.png" alt="js 마크">
                                 </figure>
                                 <div class="bar-warpper">
-                                    <div class="whole-bar">
-                                        <div class="bar js-bar">
+                                    <div class="bar js-bar">
+                                            <div class="whole-bar">
                                         </div>
                                     </div>
                                 </div>
@@ -311,8 +314,8 @@
                                     <img src="img/photoshop_logo.png" alt="포토샵 마크">
                                 </figure>
                                 <div class="bar-warpper">
-                                    <div class="whole-bar">
-                                        <div class="bar photo-bar">
+                                    <div class="bar photo-bar">
+                                            <div class="whole-bar">
                                         </div>
                                     </div>
                                 </div>
@@ -329,8 +332,8 @@
                                     <img src="img/illustrator_logo.png" alt="일러스트 마크">
                                 </figure>
                                 <div class="bar-warpper">
-                                    <div class="whole-bar">
-                                        <div class="bar ill-bar">
+                                    <div class="bar ill-bar">
+                                            <div class="whole-bar">
                                         </div>
                                     </div>
                                 </div>
@@ -536,7 +539,7 @@
                                     </div>
 
                                     <div class="folder">
-                                        <span>접어두기</span>
+                                        <span>펼치기</span>
                                         <div class="folder-arrow-container">
                                             <div class="down-arrow folder-arrow"></div>
                                             <div class="down-arrow folder-arrow"></div>
@@ -675,7 +678,7 @@
                                         </div>
                                     </div>
                                     <div class="folder">
-                                        <span>접어두기</span>
+                                        <span>펼치기</span>
                                         <div class="folder-arrow-container">
                                             <div class="down-arrow folder-arrow"></div>
                                             <div class="down-arrow folder-arrow"></div>
@@ -766,5 +769,7 @@
 
     <script src="js/size.js"></script>
     <script src="js/workout.js"></script>
+    <script src="js/ball.js"></script>
+    <script src="js/skills.js"></script>
 </body>
 </html>
