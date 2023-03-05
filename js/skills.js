@@ -5,15 +5,20 @@ function skills() {
     const $skill = document.getElementsByClassName('skill');
     const $skillExplane = document.getElementsByClassName('skills-explane');
     const $skilltext = document.getElementsByClassName('hover-img');
+    const hoverArray = ['이미지를 터치 해보세요', '이미지를 호버 해보세요']
+    let width;
     
     
     window.addEventListener('resize', ()=>{
+        
         if (window.innerWidth < 1140){
             skillsTouch();
-            hoverOrtouch();
+            width = 0;
         }
         else{
+            width = 1;
         }
+        $skilltext[0].innerHTML = hoverArray[width];
     })
     
     skillsTouch();
@@ -23,12 +28,10 @@ function skills() {
                 $skillExplane[i].classList.toggle('touch-img');            
             })
         }
-    }
-    
-    function hoverOrtouch() {
-        $skilltext[0].innerHTML = '이미지를 터치 해보세요'
-    }
+    }    
 }
+
+
 
 skillBar();
 function skillBar() {

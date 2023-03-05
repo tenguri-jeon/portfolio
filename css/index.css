@@ -353,12 +353,26 @@ nav a{
     height: 30px;
     border-radius: 30px;
     background-color: var(--main-white-color);
+    display: flex;
+    align-items: center;
 }
 
 .searching{
     color: var(--main-khaki-color);
     font-size: 18px;
     font-weight: bold;
+    margin: 0px 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.searching::after{
+    content: '';
+    display: block;
+    background-color: var(--main-khaki-color);
+    width: 1.5px;
+    height: 22px;
+    animation: blink 1s infinite;
 }
 
 .introduce-card-box{
@@ -552,6 +566,11 @@ nav a{
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
+}
+
+#skills{
+    width: 100vw;
+    height: 100vh;
 }
 
 .skills-background-container{
@@ -858,6 +877,12 @@ nav a{
 
 .code-container figure{
     width: 351px;
+    margin-bottom: 24px;
+}
+
+.double-slide-wrapper{
+    display: flex;
+    flex-direction: column;
 }
 
 .folder-main-text{
@@ -1107,6 +1132,16 @@ figcaption{
     height: unset;
 }
 
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100;
+    }
+}
+
 @keyframes searching{
     0%{
         height: 40px;
@@ -1345,6 +1380,11 @@ figcaption{
     .portfolio-main-explane{
         padding: 64px 0px;
     }
+
+    .workout-height-unset{
+        height: unset;
+    }
+
 }
 
 @media screen and (max-width:360px) {
@@ -1460,4 +1500,28 @@ figcaption{
     .characteristic-contents{
         line-height: 150%;
     }
+
+    .goto-workout{
+        width: 50px;
+    }
+
+    .workout-text{
+        align-items: center;
+        margin-bottom: 64px;
+    }
+
+    .folder{
+        left: 43%;
+    }
+
+    .workout-height-unset{
+        height: unset;
+    }
+
+    .code-container figure{
+        width: 250px;
+    }
+
+    
+
 }

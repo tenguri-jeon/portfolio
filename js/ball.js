@@ -52,16 +52,22 @@ function introAnimation() {
 
 
 const typing = ['하루하루 성실한', '책임감 강한', '상상력이 풍부한', '성장가능성이 높은'];
-const text = document.querySelectorAll('.explane-me p'); 
-let typingNumber;
+const $text = document.querySelectorAll('.explane-me p'); 
 
 
-setInterval(()=>{
-    text.innerHTML = " ";
-    for (let i = 0; i < typing.length; i++) {
-        text[i].innerHTML = typing[i].split("")
-    }  
-},5000)
+// 이상하게 나타남
+// setInterval(()=>{
+    for (let i = 0; i < $text.length; i++) {
+        $text[i].innerHTML = ''; 
+        for (let j = 0; j < typing[i].length; j++) {
+            console.log(typing[i].length)
+            setTimeout(()=>{
+                $text[i].innerHTML += typing[j].split("");
+            }, 100*j)
+        }
+    }
+// },5000);
+
 
 
 
