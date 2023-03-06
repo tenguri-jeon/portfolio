@@ -3,8 +3,10 @@ const $workOutExplane = document.getElementsByClassName('work-out-explane');
 const $folder = document.querySelectorAll('.folder');
 const $workoutOverflowContainer = document.querySelector('.workout-overflow-container');
 const $workout = document.getElementsByClassName('goto-workout');
+const $mainWorkout = document.getElementById('workout')
 let $folderSpan = document.querySelectorAll('.folder span');
 let index = 0;
+let goWorkoutTop;
 
 
 workoutIndex();
@@ -49,28 +51,36 @@ function workoutIndex() {
 }
 
 
-// 펼치기 상태에서 workout 다른걸 누르면 화살표 변경하는 방법 / 위로 올라오게 만드는 방법
-folderText();
-function folderText(){
-    for (let i = 0; i < $folder.length; i++) {
-        $folder[i].addEventListener('click' , ()=>{
-            $folder[i].classList.toggle('folder-arrow-click');
-            $workoutOverflowContainer.classList.toggle('workout-height-unset');
-        }) 
-    }
-}
+// folderText();
+// function folderText(){
+    // for (let i = 0; i < $folder.length; i++) {
+    //     $folder[i].addEventListener('click' , ()=>{
+    //         $folder[i].classList.toggle('folder-arrow-click');
+    //         $workoutOverflowContainer.classList.toggle('workout-height-unset');
+    //     }) 
+    // }
+// }
 
 exchangeFolder();
 function exchangeFolder() {
     const folderArray = ['펼치기', '접어두기']
-    for (let i = 0; i < $folderSpan.length; i++) {
+    for (let i = 0; i < $folder.length; i++) {
         $folder[i].addEventListener('click', ()=>{
-                index++
-                if (index > 1) {
-                    index = 0
+            if ($folder[i].classList.contains('folder-arrow-click')) {
+                for(let j = 0 ; j < $folder.length ; j ++) {
+                    $folder[j].classList.remove('folder-arrow-click')
                 }
-                $folderSpan[0].innerHTML = `${folderArray[index]}`;
-                $folderSpan[1].innerHTML = `${folderArray[index]}`;
+                $folderSpan[0].innerHTML = `${folderArray[0]}`;
+                $folderSpan[1].innerHTML = `${folderArray[0]}`;
+            }else {
+                for(let j = 0 ; j < $folder.length ; j ++) {
+                    $folder[j].classList.add('folder-arrow-click')
+                }
+                $folderSpan[0].innerHTML = `${folderArray[1]}`;
+                $folderSpan[1].innerHTML = `${folderArray[1]}`;
+                
+            }
+                $workoutOverflowContainer.classList.toggle('workout-height-unset');
             })
         }
     }
@@ -93,5 +103,16 @@ function sizeWorkout() {
             $workoutExplane[i].style.width = `${workoutWidth}px`;
         }
     }
-
 }        
+
+ goWorkoutContainerTop();
+    function goWorkoutContainerTop() {
+        for (let i = 0; i< $workout.length; i++) {
+            $workout[i].addEventListener('click', ()=>{
+                clickWorkoutIndex();
+            })
+        }
+        function clickWorkoutIndex() {
+            goWorkoutTop = window.scrollTo(0,window.scrollY + $mainWorkout.getBoundingClientRect().top)
+        }
+    }

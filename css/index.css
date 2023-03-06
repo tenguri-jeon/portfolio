@@ -218,11 +218,7 @@ nav a{
     flex-direction: column;
     gap: 8px;
     overflow: hidden;
-    animation-name: searching;
-    animation-delay: 0.5s;
-    animation-duration: 2s;
-    transition: 0.5s;
-    animation-fill-mode: both;
+    transition: 1s;
 }
 
 .ball-display{
@@ -1142,17 +1138,6 @@ figcaption{
     }
 }
 
-@keyframes searching{
-    0%{
-        height: 40px;
-    }
-
-    100%{
-        height: 256px;
-    }
-}
-
-
 @keyframes jump {
 	0% {
 		bottom: 0;
@@ -1308,10 +1293,19 @@ figcaption{
     .workout-height-unset{
         height: unset;
     }
+
+    #skills{
+        width: unset;
+        height: unset;
+    }
+    
 }
 
 
+
+
 @media screen and (max-width:834px) {
+    
     .introduce-card-box{
         flex-direction: column;
     }
