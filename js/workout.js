@@ -51,15 +51,6 @@ function workoutIndex() {
 }
 
 
-// folderText();
-// function folderText(){
-    // for (let i = 0; i < $folder.length; i++) {
-    //     $folder[i].addEventListener('click' , ()=>{
-    //         $folder[i].classList.toggle('folder-arrow-click');
-    //         $workoutOverflowContainer.classList.toggle('workout-height-unset');
-    //     }) 
-    // }
-// }
 
 exchangeFolder();
 function exchangeFolder() {
