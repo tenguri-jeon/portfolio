@@ -65,7 +65,9 @@
                 </figure>
             </div>
 
-            <div class="underline"></div>
+            <div class="underline">
+            </div>
+        </div>
 
           
 
@@ -83,13 +85,13 @@
     <section id="profile">
         <div class="file-container">
             <div class="index-area">
-                <figure>
+                <figure class="container-profil-index">
                     <img src="img/profile.png" alt="profile-index">
                 </figure>
-                <figure>
+                <figure class="container-skill-index">
                     <img src="img/skilss-transparent.png" alt="skills-index-transparent ">
                 </figure>
-                <figure>
+                <figure class="container-workout-index">
                     <img src="img/workout-transparent.png" alt="workout-index-transparent ">
                 </figure>
             </div>
@@ -204,13 +206,13 @@
     <section id="skills">
         <div class="file-container">
             <div class="index-area">
-                <figure>
+                <figure class="container-profil-index">
                     <img src="img/profile-transparent.png" alt="profile-index-transparent">
                 </figure>
-                <figure>
+                <figure class="container-skill-index">
                     <img src="img/skills.png" alt="skills-index">
                 </figure>
-                <figure>
+                <figure class="container-workout-index">
                     <img src="img/workout-transparent.png" alt="workout-index-transparent ">
                 </figure>
             </div>
@@ -321,13 +323,13 @@
     <section id="workout">
         <div class="file-container">
             <div class="index-area">
-                <figure>
+                <figure class="container-profil-index">
                     <img src="img/profile-transparent.png" alt="profile-index-transparent">
                 </figure>
-                <figure>
+                <figure class="container-skill-index">
                     <img src="img/skilss-transparent.png" alt="skills-index-transparent">
                 </figure>
-                <figure>
+                <figure class="container-workout-index">
                     <img src="img/workout.png" alt="workout-index ">
                 </figure>
             </div>
@@ -695,59 +697,77 @@
                     </div>
                 </div>
 
-                <div class="contact-contents-background">
-                    <ul class="contact-contents-wrapper">
-                        <li class="contact-name-contents">
-                            <div class="contact-name-wrapper">
-                                <figure class="contact-gyulee-img">
-                                    <img src="img/gyuri-img.jpg" alt="전규리 사진">
-                                </figure>
-                                <div class="gyulee-name-wrapper">
-                                    <p>. JEON GYU LEE</p>
+                <div class="contact-overflow-hidden">
+                    <div class="contact-contents-background">
+                        <ul class="contact-contents-wrapper">
+                            <li class="contact-name-contents">
+                                <div class="contact-name-wrapper">
+                                    <figure class="contact-gyulee-img">
+                                        <img src="img/gyuri-img.jpg" alt="전규리 사진">
+                                    </figure>
+                                    <div class="gyulee-name-wrapper">
+                                        <p>. JEON GYU LEE</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="contact-tel-mail-sns">
-                                <div class="way-contact">
-                                    <p>Tel :</p>
-                                    <p>mail :</p>
-                                    <p>instagram</p>
+                                <div class="contact-tel-mail-sns">
+                                    <div class="way-contact">
+                                        <p>Tel :</p>
+                                        <p>mail :</p>
+                                        <p>instagram</p>
+                                    </div>
+                                    <div class="way-contact-contents">
+                                        <p>010.3516.5810</p>
+                                        <p>0108503@gmail.com</p>
+                                        <p>ten_guin</p>
+                                    </div>
                                 </div>
-                                <div class="way-contact-contents">
-                                    <p>010.3516.5810</p>
-                                    <p>0108503@gmail.com</p>
-                                    <p>ten_guin</p>
+                                <div class="characteristic">
+                                    <div class="characteristic-text">
+                                        <p>특성</p>
+                                    </div>
+                                    <div class="characteristic-contents">
+                                        <p>노력하는 , 열정있는 , 고민하는, 성장하는 퍼블리셔를 찾으신다면
+                                            연락주세요   </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="characteristic">
-                                <div class="characteristic-text">
-                                    <p>특성</p>
+                            </li>
+                            <li class="send-email">
+                                <form class="gform" data-email="0108503@gmail.com" method="post"
+                                action="https://script.google.com/macros/s/AKfycbzy_ww-Dh2595HgylyIag_4S97YNMxQdD7U11SrO533omWihWGtwPlEvO0ySDoTYE73/exec"> 
+                                <!-- Replace the form "action" url with the one you cpied for your Web App URL -->
+                                <!-- https://github.com/SaintSilver/html-form-send-email-via-google-script-without-server/blob/master/README.ko.md#8-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-html-form-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%97%B4%EA%B8%B0 -->
+                                <div class="email-text-wrapper">
+                                    <p class="email-send-your-message">Send Your Message</p>
+                                    <div class="email-name-wrapper">
+                                        <div class="email-input">
+                                            <p class="email-text">  Your Email </p> 
+                                            <input type="email" placeholder="이메일을 적어주세요">
+                                        </div>
+                                        <div class="email-name-input">
+                                            <p class="email-text" > your Name </p>
+                                            <input type="text" placeholder="성함을 적어주세요">
+                                        </div>
+                                    </div>
+                                    <p class="email-text"> Your Message </p>
+                                    <input class="your-message-input" placeholder="내용을 작성해 주세요" type="text">
+                                    <button class="submit-message" type="submit">Send Message</button>
                                 </div>
-                                <div class="characteristic-contents">
-                                    <p>노력하는 , 열정있는 , 고민하는, 성장하는 퍼블리셔를 찾으신다면
-                                        연락주세요   </p>
+                                <div class="another-contact">
+                                    <div class="address">
+                                        <span>Address</span>
+                                        <p>인천광역시 남동구</p>
+                                    </div>
+                                    <div class="email-address">
+                                        <span>Email</span>
+                                        <p>0108503@gmail.com</p>
+                                    </div>
+                                    <p class="respond">메일을 보내주시면 <br>
+                                        3일 이내로 답장을 드릴게요 : )</p>
                                 </div>
-                            </div>
-                        </li>
-                        </li class="send-email">
-                            <form class="gform" data-email="0108503@gmail.com" method="post"
-                            action="https://script.google.com/macros/s/AKfycbzy_ww-Dh2595HgylyIag_4S97YNMxQdD7U11SrO533omWihWGtwPlEvO0ySDoTYE73/exec"> 
-                            <!-- Replace the form "action" url with the one you cpied for your Web App URL -->
-                            <!-- https://github.com/SaintSilver/html-form-send-email-via-google-script-without-server/blob/master/README.ko.md#8-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-html-form-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%97%B4%EA%B8%B0 -->
-                            <div class="email-text-wrapper">
-                                <p>Send Your Message</p>
-                                <div class="email-name-wrapper">
-                                    <p class="email-text">  Your Email </p> 
-                                    <input type="email">
-                                    <p class="email-text" > your Name </p>
-                                    <input type="text">
-                                </div>
-                                <p  class="email-text"> Your Message </p>
-                                <input type="text">
-                                <input type="submit">
-                            </div>
-                        </form>
-                        </li>
-                    </ul>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -759,5 +779,6 @@
     <script src="js/workout.js"></script>
     <script src="js/ball.js"></script>
     <script src="js/skills.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

@@ -1066,6 +1066,36 @@ figcaption{
     height: 25px;
 }
 
+.send-email{
+    flex-grow: 100;
+}
+
+.another-contact span{
+    font-size: 24px;
+    color: var(--main-blue-color);
+    font-weight: bold;
+}
+
+.another-contact p{
+    font-size: 18px;
+    color: var(--main-gray-color);
+    margin-top: 16px;
+}
+
+.another-contact p:nth-child(3) {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--main-blue-color);
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+}
+
 .contact-file-contents-background{
     background-color: var(--contact-gray-color);
     padding: 20px;
@@ -1096,9 +1126,22 @@ figcaption{
     overflow: hidden;
 }
 
+.contact-overflow-hidden{
+    overflow: hidden;
+}
+
 .contact-contents-background{
-    background-color: var(--main-white-color);
     padding: 60px;
+    background-color: var(--main-white-color);
+}
+
+.contact-contents-wrapper{
+    display: flex;
+    gap: 120px;
+}
+
+.contact-name-contents{
+    flex-shrink: 0;
 }
 
 .contact-name-wrapper{
@@ -1126,6 +1169,10 @@ figcaption{
     margin-bottom: 16px;
 }
 
+.contact-display-none{
+    display: none;
+}
+
 .characteristic{
     display: flex;
     gap: 64px;
@@ -1143,11 +1190,85 @@ figcaption{
 
 .top-workout-index-display{
     display: none;
-    /* 위에있는 워크아웃 보였다 안보였다 하는 클래스 */
 }
 
 .workout-height-unset{
     height: unset;
+}
+
+.email-text-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.email-send-your-message{
+    margin-bottom: 16px;
+}
+
+.email-send-your-message p{
+    font-size: 18px;
+    color: var(--main-black-color);
+}
+
+.email-name-wrapper p{
+    font-size: 16px;
+    color: var(--main-gray-color);
+    gap: 16px;
+}
+
+.email-name-input{
+    width: 100%;
+}
+
+.email-input{
+    width: 100%;
+}
+
+.email-text{
+    font-size: 16px;
+    color: var(--main-gray-color);
+}
+
+
+.your-message-input{
+    width: 100%;
+    height: 150px;
+}
+
+.submit-message{
+    background-color: var(--main-blue-color);
+    border: 0px;
+    color: var(--main-white-color);
+    width: 150px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+input{
+    margin-bottom: 16px;
+    margin-top: 8px;
+    border: 0px ;
+    border-radius: 8px;
+    padding: 8px;
+    background: rgb(193, 193, 193);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.email-name-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.another-contact{
+    border-left: 1px solid var(--main-gray-color);
+    padding-left: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
 }
 
 @keyframes blink{

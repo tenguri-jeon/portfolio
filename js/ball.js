@@ -120,42 +120,56 @@ function makeSearchHistory(contents) {
         index++
 }
 
-navigationTap();
-function navigationTap(params) {
-    const navigation = document.querySelectorAll('nav a');
+clickIndex();
+function clickIndex(params) {
     
-    navigation[0].addEventListener('click',()=>{
-        tapgoProfile();
-        function tapgoProfile() {
-            let goProfileTap;
-            goProfileTap = window.scrollTo(0,window.scrollY + $profileTop);
-            let $profileTop = document.getElementById('profile').getBoundingClientRect().top;
-        }
-    })
-    navigation[1].addEventListener('click', ()=>{
-        tapgoSkills();
-        function tapgoSkills() {
-            let goSkillsTap;
-            goSkillsTap = window.scrollTo(0,window.scrollY + $skillsTop);
-            let $skillsTop= document.getElementById('skills').getBoundingClientRect().top;
-        }
-    })
-    navigation[2].addEventListener('click', ()=>{
-        tapWorkout();
-        function tapWorkout() {
-            let goWorkoutTap;
-            goWorkoutTap = window.scrollTo(0,window.scrollY + $workoutTop);
-            let $workoutTop= document.getElementById('workout').getBoundingClientRect().top;
-        }
-    })
-    navigation[3].addEventListener('click', ()=>{
-        tapContatct();
-    function tapContatct() {
-        let goContactTap;
-        goContactTap = window.scrollTo(0,window.scrollY + $contactTop);
-        let $contactTop= document.getElementById('contact').getBoundingClientRect().top;
-    }
-})
+    const navigation = document.querySelectorAll('nav a');
+    const $profileContainer = document.getElementById('profile');
+    const $skillsContainer = document.getElementById('skills');
+    const $workoutContainer = document.getElementById('workout');
+    const $contactContainer = document.getElementById('contact');
+    const $containerprofilIndex = document.getElementsByClassName('container-profil-index');
+    const $containerskillIndex = document.getElementsByClassName('container-skill-index');
+    const $containerworkoutIndex = document.getElementsByClassName('container-workout-index');
+    
+    
+    //   navigation[0].addEventListener('click',()=>{
+        //     goProfileContainer();
+        //   })
+        //   navigation[1].addEventListener('click',()=>{
+            
+//   })
+// a여서 안되는 듯 마크업 수정해보기
 
+
+for (let i = 0; i < $containerskillIndex.length; i++) {
+    $containerskillIndex[i].addEventListener('click', (e)=>{
+        goSkillsContainer();
+    });
+}
+for (let i = 0; i < $containerprofilIndex.length; i++) {
+    $containerprofilIndex[i].addEventListener('click', (e)=>{
+        goProfileContainer();
+    });
+}
+for (let i = 0; i < $containerworkoutIndex.length; i++) {
+    $containerworkoutIndex[i].addEventListener('click', (e)=>{
+        goWorkoutContainer();
+    });
 }
 
+
+function goContactContainer() {
+    window.scrollTo(0, window.scrollY + $contactContainer.getBoundingClientRect().top);
+}
+function goProfileContainer() {
+    window.scrollTo(0, window.scrollY + $profileContainer.getBoundingClientRect().top);
+}
+function goSkillsContainer() {
+    window.scrollTo(0, window.scrollY + $skillsContainer.getBoundingClientRect().top);
+}
+function goWorkoutContainer() {
+    window.scrollTo(0, window.scrollY + $workoutContainer.getBoundingClientRect().top);
+}
+
+}
