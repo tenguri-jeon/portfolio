@@ -11,8 +11,6 @@ function introAnimation() {
     const $ballWrapper = document.getElementsByClassName('ball-wrapper');
     const $scrolldown = document.getElementsByClassName('scroll-down');
 
-    console.log($scrolldown);
-
     function opacity() {
         for (let i = 0; i < $ballPiece.length; i++) {
             $ballPiece[i].classList.add('ball-display')
@@ -62,23 +60,26 @@ const $text = document.querySelectorAll('.explane-me p');
 const searchArea = document.querySelector('.searh-area')
 const $imagine = document.getElementsByClassName('imagine');
 const $searchingMyName = document.getElementsByClassName('search-my-name');
-const plusPx = 50;
+const plusPx = 60;
 const myname = ['신입 퍼블리셔 전규리'];
 const mynameSplit = myname[0].split("");
 let typingSplit;
-let searchContainerHeight = 60; 
+let searchContainerHeight = 50; 
 
 function searchingMyname(){
     setInterval(()=>{
-        for (let i = 0; i < mynameSplit.length; i++) {
-            setTimeout(()=>{
-                $searchingMyName[0].innerHTML += mynameSplit[i]
-            },100*i)
-            $searchingMyName[0].innerHTML = '';
-        }
+        typingName();
     },5000)
 }
 
+function typingName(){
+    for (let i = 0; i < mynameSplit.length; i++) {
+        setTimeout(()=>{
+            $searchingMyName[0].innerHTML += mynameSplit[i]
+        },100*i)
+        $searchingMyName[0].innerHTML = '';
+    }
+}
 
 
 
@@ -103,21 +104,20 @@ function makeSearchHistory(contents) {
         
         container.appendChild(textContainer);
         
-        console.log(searchArea);
         searchArea.insertBefore(container, document.querySelector('.search-area'));
-        // searchArea.appendChild(document.querySelector('.searh-area'));
         $main.appendChild(document.querySelector('.scroll-down'));
 
         searchContainerHeight += plusPx;
         searchArea.style.height = `${searchContainerHeight}px`;
         
-        for (let i = 0; i < typing[index].length; i++) {
-            setTimeout(()=>{
-                typingSplit = typing[index -1 ].split("")
-                textContainer.innerHTML += typingSplit[i];
-            },100*i)
-        }
-        index++
+            for (let i = 0; i < typing[index].length; i++) {
+                setTimeout(()=>{
+                    typingSplit = typing[index -1 ].split("")
+                    textContainer.innerHTML += typingSplit[i];
+                },100*i)
+            }
+            index++
+
 }
 
 clickIndex();
@@ -139,7 +139,7 @@ function clickIndex(params) {
         //   navigation[1].addEventListener('click',()=>{
             
 //   })
-// a여서 안되는 듯 마크업 수정해보기
+// a여서 안되는 듯??
 
 
 for (let i = 0; i < $containerskillIndex.length; i++) {

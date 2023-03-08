@@ -25,6 +25,7 @@
     z-index: 100;
 } */
 
+
 header{
     display: flex;
     align-items: center;
@@ -32,6 +33,7 @@ header{
     justify-content: space-between;
     margin: 0 auto;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 h1 > a {
@@ -49,9 +51,9 @@ nav a{
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 100vw;
     height: 100vh;
     gap: 80px;
+    box-sizing: border-box;
 }
 
 .center{
@@ -212,13 +214,14 @@ nav a{
     border-radius: 30px;
     margin: 0 auto;
     width: 600px;
-    height: 40px;
+    height: 60px;
     padding: 8px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     overflow: hidden;
     transition: 1s;
+    box-sizing: border-box;
 }
 
 .ball-display{
@@ -289,7 +292,7 @@ nav a{
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
-    animation: downarrow 2s infinite;
+    animation: maindownarrow 2s infinite;
 }
 
 .down-arrow-wrapper{
@@ -570,11 +573,6 @@ nav a{
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
-}
-
-#skills{
-    width: 100vw;
-    height: 100vh;
 }
 
 #skills .index-area figure:nth-child(1){
@@ -858,8 +856,13 @@ nav a{
 .workout-text p{
     color: var(--main-blue-color);
     font-weight: bold;
-    line-height: 150%;
+    line-height: 180%;
 }
+
+.tittle{
+    color: var(--main-black-color);
+}
+
 
 .workout-tag{
     display: flex;
@@ -890,7 +893,7 @@ nav a{
 
 .code-container > .hbaf-introduce{
     margin-bottom: 128px;
-    margin-top: 64px;
+    padding-top: 32px; 
 }
 
 .code-container figure{
@@ -922,11 +925,10 @@ nav a{
 }
 
 .code-explane-img-container{
-    margin-top: 64px;
+    margin-bottom: 128px;
     display: flex;
     justify-content: center;
     gap: 24px;
-    margin-bottom: 128px;
 }
 
 .hbaf-animation-code-img-wrapper{
@@ -1414,17 +1416,31 @@ input{
   100% {transform:translateX(0) translateY(0) scale(0) rotateZ(0)}
 }
 
-@keyframes downarrow {
+@keyframes maindownarrow {
     0%{
-     transform: translateY(0px);   
+        transform: translate(0 , 0px);   
     }
 
     50%{
-        transform: translateY(15px);
+        transform: translate(0 , 15px);
     }
 
     100%{
-        transform: translateY(0px);
+        transform: translate(0 , 0px);
+    }
+}
+
+@keyframes downarrow {
+    0%{
+     transform: translate(-50% , 0px);   
+    }
+
+    50%{
+        transform: translate(-50% , 15px);
+    }
+
+    100%{
+        transform: translate(-50% , 0px);
     }
 }
 
@@ -1437,11 +1453,10 @@ input{
         height: unset;
     }
 
-    #skills{
+    #profile{
         width: unset;
         height: unset;
     }
-    
 }
 
 
@@ -1449,6 +1464,10 @@ input{
 
 @media screen and (max-width:834px) {
     
+    .gyufle span{
+        font-size: 80px;
+    }
+
     .introduce-card-box{
         flex-direction: column;
     }
@@ -1464,9 +1483,12 @@ input{
         flex-basis: 50%;
         align-items: flex-start;
         gap: 8px;
-
+        
     }
-
+    
+    .introduce{
+        flex-direction: column;
+    }
     .introduce-card{
         flex-basis: 50%;
     }
@@ -1484,6 +1506,7 @@ input{
         padding: unset;
         flex-direction: column;
         padding: 64px 0px;
+        padding-bottom: 128px;
     }
 
     .code-explane-img-container{
@@ -1492,7 +1515,11 @@ input{
     }
 
     .workout-overflow-container{
-        height: 812px;
+        height: 853px;
+    }
+
+    .folder{
+        bottom: 30px;
     }
 
     .hbaf-code{
@@ -1503,15 +1530,51 @@ input{
     .workout-height-unset{
         height: unset;
     }
-
+    
     .animation-img-container{
         margin: 0 auto;
     }
 }
 
 @media screen and (max-width:670px) {
+    
+    
+
+    .hobby-card-content{
+        flex-direction: column;
+    }
+
+    .goto-workout{
+        width: 50px;
+    }
+
+    .workout-text{
+        padding: unset;
+    }
+    
+    .profile-gradu-cards{
+        flex-direction: column;
+    }
+
+    .workout-text{
+        align-items: flex-start;
+        margin-bottom: 64px;
+    }
+    
+    .searh-area{
+        width: 100%;
+    }
+
+    #main{
+        padding: 0px 32px;
+    }
+
+    .workout-tag p{
+        font-size: 14px;
+    }
+
     .workout-overflow-container{
-        height: 737px;
+        height: 710px;
     }
 
     .portfolio-main-explane{
@@ -1522,7 +1585,44 @@ input{
         height: unset;
     }
 
+    .gradu-card{
+        width: unset;
+    }
+
+    .profile-card{
+        width: unset;
+    }
+
+
+    .contact-name-contents{
+        flex-grow: 100;
+    }
+
+    form{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .email-text-wrapper{
+        align-items: center;
+    }
+
+    .another-contact{
+        border-left: unset;
+        border-top: 1.5px solid var(--main-blue-color);
+        padding-top: 24px;
+        width: 100%;
+    }
+
+    .contact-contents-background{
+        padding: 16px;
+    }
+
+    .workout-text p{
+        font-size: 14px;
+    }
 }
+
 
 @media screen and (max-width:360px) {
     
@@ -1566,14 +1666,6 @@ input{
         gap: 64px;
     }
 
-    .introduce{
-        flex-direction: column;
-    }
-
-    .profile-gradu-cards{
-        flex-direction: column;
-    }
-
     .profile-card{
         padding: 16px;
         box-sizing: border-box;
@@ -1584,9 +1676,6 @@ input{
         box-sizing: border-box;
     }
 
-    .hobby-card-content{
-        flex-direction: column;
-    }
 
     #skills{
         padding-bottom: 256px;
@@ -1630,25 +1719,13 @@ input{
         padding: 16px;
     }
 
-    .contact-contents-background{
-        padding: 16px;
-    }
-
     .characteristic-contents{
         line-height: 150%;
     }
 
-    .goto-workout{
-        width: 50px;
-    }
-
-    .workout-text{
-        align-items: center;
-        margin-bottom: 64px;
-    }
-
     .folder{
-        left: 43%;
+        left: 50%;
+        bottom: 21px;
     }
 
     .workout-height-unset{
@@ -1659,6 +1736,5 @@ input{
         width: 250px;
     }
 
-    
-
+   
 }
