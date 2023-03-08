@@ -1,14 +1,18 @@
-const $contactContentsWrapper = document.getElementsByClassName('contact-contents-wrapper');
-const $contactLi = document.querySelectorAll('.contact-contents-wrapper li');
-const $contactIndex = document.getElementsByClassName('contact-index');
-const $submit = document.getElementsByClassName('submit-message');
-let contactWidth = document.getElementsByClassName('contact-contents-background');
-let width;
-
-
-window.addEventListener('resize', ()=>{
-    contactResize()
-})
+contact();
+function contact() {
+    
+    const $contactContentsWrapper = document.getElementsByClassName('contact-contents-wrapper');
+    const $contactLi = document.querySelectorAll('.contact-contents-wrapper li');
+    const $contactIndex = document.getElementsByClassName('contact-index');
+    const $submit = document.getElementsByClassName('submit-message');
+    const $sendMessage = document.getElementsByClassName('submit-message');
+    let contactWidth = document.getElementsByClassName('contact-contents-background');
+    let width;
+    
+    
+    window.addEventListener('resize', ()=>{
+        contactResize()
+    })
 
 contactIndexdeco();
 function contactIndexdeco() {
@@ -40,4 +44,11 @@ function contactResize(){
     for (let i = 0; i < $contactLi.length; i++) {
         $contactLi[i].style.width = `${width}px`
     }
+}
+
+$sendMessage[0].addEventListener('click',()=>[
+    setTimeout(() => {
+        alert('메일이 정상적으로 보내졌습니다. 연락주셔서 감사합니다. :)')
+    }, 2000)
+])
 }

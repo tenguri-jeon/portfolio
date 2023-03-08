@@ -1,30 +1,33 @@
-const $workoutIndex = document.getElementsByClassName('workout-index');
-const $workOutExplane = document.getElementsByClassName('work-out-explane');
-const $folder = document.querySelectorAll('.folder');
-const $workoutOverflowContainer = document.querySelector('.workout-overflow-container');
-const $workout = document.getElementsByClassName('goto-workout');
-const $mainWorkout = document.getElementById('workout')
-let $folderSpan = document.querySelectorAll('.folder span');
-let index = 0;
-let goWorkoutTop;
-
-
-workoutIndex();
-function workoutIndex() {
+workout();
+function workout() {
     
-    for(let i = 0 ; i < $workoutIndex.length ; i++ ){
-        $workoutIndex[i].addEventListener('click', ()=>{
-            resetIndex();
-            resetWorkout();
-            $workoutIndex[i].classList.add('pick-index');
-            $workOutExplane[i].classList.add('workout-display')
-            $workout[i].classList.remove('back-index');
-            $workOutExplane[i].classList.add('workout-display')
-        })
-    }
+    const $workoutIndex = document.getElementsByClassName('workout-index');
+    const $workOutExplane = document.getElementsByClassName('work-out-explane');
+    const $folder = document.querySelectorAll('.folder');
+    const $workoutOverflowContainer = document.querySelector('.workout-overflow-container');
+    const $workout = document.getElementsByClassName('goto-workout');
+    const $mainWorkout = document.getElementById('workout')
+    let $folderSpan = document.querySelectorAll('.folder span');
+    let index = 0;
+    let goWorkoutTop;
     
-    for (let i = 0; i < $workout.length; i++) {
-        $workout[i].addEventListener('click', ()=>{
+    
+    workoutIndex();
+    function workoutIndex() {
+        
+        for(let i = 0 ; i < $workoutIndex.length ; i++ ){
+            $workoutIndex[i].addEventListener('click', ()=>{
+                resetIndex();
+                resetWorkout();
+                $workoutIndex[i].classList.add('pick-index');
+                $workOutExplane[i].classList.add('workout-display')
+                $workout[i].classList.remove('back-index');
+                $workOutExplane[i].classList.add('workout-display')
+            })
+        }
+        
+        for (let i = 0; i < $workout.length; i++) {
+            $workout[i].addEventListener('click', ()=>{
             resetIndex();
             resetWorkout();
             $workoutIndex[i].classList.add('pick-index');
@@ -71,10 +74,10 @@ function exchangeFolder() {
                 $folderSpan[1].innerHTML = `${folderArray[1]}`;
                 
             }
-                $workoutOverflowContainer.classList.toggle('workout-height-unset');
-            })
-        }
+            $workoutOverflowContainer.classList.toggle('workout-height-unset');
+        })
     }
+}
 
 sizeWorkout();
 function sizeWorkout() {
@@ -96,14 +99,15 @@ function sizeWorkout() {
     }
 }        
 
- goWorkoutContainerTop();
-    function goWorkoutContainerTop() {
-        for (let i = 0; i< $workout.length; i++) {
-            $workout[i].addEventListener('click', ()=>{
-                clickWorkoutIndex();
-            })
-        }
-        function clickWorkoutIndex() {
-            goWorkoutTop = window.scrollTo(0,window.scrollY + $mainWorkout.getBoundingClientRect().top)
-        }
+goWorkoutContainerTop();
+function goWorkoutContainerTop() {
+    for (let i = 0; i< $workout.length; i++) {
+        $workout[i].addEventListener('click', ()=>{
+            clickWorkoutIndex();
+        })
     }
+    function clickWorkoutIndex() {
+        goWorkoutTop = window.scrollTo(0,window.scrollY + $mainWorkout.getBoundingClientRect().top)
+    }
+}
+}

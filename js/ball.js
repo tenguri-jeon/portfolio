@@ -1,49 +1,50 @@
-introAnimation();
-function introAnimation() {
+main();
+function main() {
     
-    const $ballPiece = document.querySelectorAll('.ball');
-    const $ballText = document.getElementsByClassName('ball-text');
-    const $ball = document.querySelector('#ball');
-    const $ballShadow = document.querySelector('#ballshadow');
-    const $gyugle = document.getElementsByClassName('gyufle');
-    const $searchContainer = document.getElementsByClassName('searh-area');
-    const $gyugleSpan = document.querySelectorAll('.gyufle span');
-    const $ballWrapper = document.getElementsByClassName('ball-wrapper');
-    const $scrolldown = document.getElementsByClassName('scroll-down');
-
-    function opacity() {
-        for (let i = 0; i < $ballPiece.length; i++) {
-            $ballPiece[i].classList.add('ball-display')
+    introAnimation();
+    function introAnimation() {
+        
+        const $ballPiece = document.querySelectorAll('.ball');
+        const $ballText = document.getElementsByClassName('ball-text');
+        const $ballShadow = document.querySelector('#ballshadow');
+        const $gyugle = document.getElementsByClassName('gyufle');
+        const $searchContainer = document.getElementsByClassName('searh-area');
+        const $ballWrapper = document.getElementsByClassName('ball-wrapper');
+        const $scrolldown = document.getElementsByClassName('scroll-down');
+        
+        function opacity() {
+            for (let i = 0; i < $ballPiece.length; i++) {
+                $ballPiece[i].classList.add('ball-display')
+            }
+            for (let i = 0; i < $ballText.length; i++) {
+                $ballText[i].classList.add('ball-display')
+            }
         }
-        for (let i = 0; i < $ballText.length; i++) {
-            $ballText[i].classList.add('ball-display')
+        
+        function gyugleDisplay() {
+            $gyugle[0].classList.remove('ball-display');
+            $searchContainer[0].classList.remove('ball-display');
+            $ballWrapper[0].classList.add('ball-display');
         }
+        
+        function downaroowAnimation() {
+            $scrolldown[0].classList.remove('ball-display');
     }
-
-    function gyugleDisplay() {
-        $gyugle[0].classList.remove('ball-display');
-        $searchContainer[0].classList.remove('ball-display');
-        $ballWrapper[0].classList.add('ball-display');
-    }
-
-    function downaroowAnimation() {
-        $scrolldown[0].classList.remove('ball-display');
-    }
-
+    
     setTimeout(function(){
         opacity();
     }, 8000);
-
-
+    
+    
     setTimeout(function(){
         $ballShadow.classList.add('ball-display');
     },3000)
-
+    
     setTimeout(function(){
         gyugleDisplay();
     },9000)
-
-
+    
+    
     setTimeout(function(){
         downaroowAnimation();
         searchingMyname();
@@ -51,8 +52,8 @@ function introAnimation() {
         setInterval(() => {
             totalSearchHistory();
         }, 14000);
-
-
+        
+        
     },11500)
 } 
 
@@ -64,23 +65,25 @@ const $searchingMyName = document.getElementsByClassName('search-my-name');
 const plusPx = 50;
 const myname = ['신입 퍼블리셔 전규리'];
 const mynameSplit = myname[0].split("");
-let typingSplit;
 let searchContainerHeight = 60; 
 
 function searchingMyname(){
     typingName();
     setInterval(()=>{
         typingName();
-    },12500)
+    },14000)
 }
 
 function typingName(){
+    $searchingMyName[0].innerHTML = '';
     for (let i = 0; i < mynameSplit.length; i++) {
         setTimeout(()=>{
             $searchingMyName[0].innerHTML += mynameSplit[i]
         },100*i)
-        $searchingMyName[0].innerHTML = '';
     }
+    setTimeout(()=>{
+        $searchingMyName[0].innerHTML = '';
+    },6000)
 }
 
 function totalSearchHistory(){
@@ -89,10 +92,10 @@ function totalSearchHistory(){
             makeSearchHistory(typing[i]);
         }, 1500 * i);
     }
-
-
-function makeSearchHistory(contents) {
-
+    
+    
+    function makeSearchHistory(contents) {
+        
         const $main = document.getElementById('main');
         
         const container = document.createElement('div');
@@ -114,27 +117,27 @@ function makeSearchHistory(contents) {
         
         searchArea.insertBefore(container, document.querySelector('.search-area'));
         $main.appendChild(document.querySelector('.scroll-down'));
-
+        
         searchContainerHeight += plusPx;
         searchArea.style.height = `${searchContainerHeight}px`;
         
-
+        
         makeHistoryLine(contents);
-
+        
         function makeHistoryLine(textContent){
             let textTemp = textContent.split("");
-
+            
             for (let i = 0; i < textTemp.length ; i++) {
                 setTimeout(()=>{
                     textContainer.innerHTML += textTemp[i];
                 },100*i)
             }
         }
-
+        
         setTimeout(()=>{
             removeSerarch();
         },2000)
-         
+        
         function removeSerarch() {
             setTimeout(() => {
                 container.remove();
@@ -142,10 +145,10 @@ function makeSearchHistory(contents) {
                 searchArea.style.height = `${searchContainerHeight}px`;
             }, 5000);
         }
-}
-
-
-
+    }
+    
+    
+    
 }
 
 clickIndex();
@@ -160,7 +163,7 @@ function clickIndex(params) {
     const $containerskillIndex = document.getElementsByClassName('container-skill-index');
     const $containerworkoutIndex = document.getElementsByClassName('container-workout-index');
     
-
+    
     navigation[0].addEventListener('click',(e)=>{
         e.preventDefault();
         goProfileContainer();
@@ -177,14 +180,14 @@ function clickIndex(params) {
         e.preventDefault();
         goContactContainer();     
     })
-
-
-
-for (let i = 0; i < $containerskillIndex.length; i++) {
-    $containerskillIndex[i].addEventListener('click', (e)=>{
-        goSkillsContainer();
-    });
-}
+    
+    
+    
+    for (let i = 0; i < $containerskillIndex.length; i++) {
+        $containerskillIndex[i].addEventListener('click', (e)=>{
+            goSkillsContainer();
+        });
+    }
 for (let i = 0; i < $containerprofilIndex.length; i++) {
     $containerprofilIndex[i].addEventListener('click', (e)=>{
         goProfileContainer();
@@ -210,4 +213,5 @@ function goWorkoutContainer() {
     window.scrollTo(0, window.scrollY + $workoutContainer.getBoundingClientRect().top);
 }
 
+}
 }

@@ -939,9 +939,13 @@ nav a{
 }
 
 .infant-care-introduce p{
+    margin-top: 64px;
     font-weight: bold;
     line-height: 150%;
-    margin-top: 16px;
+}
+
+.infant-care-introduce{
+    margin-top: 36px;
 }
 
 .code-explane-img-container{
@@ -1586,11 +1590,21 @@ input{
     font-size: 32px;
     }
 
+    .contact-tel-mail-sns{
+        gap: 8px;
+    }
+
+    .characteristic{
+        gap: 8px;
+    }
+
 }
 
 @media screen and (max-width:670px) {
     
-    
+    .search-ing{
+        width: 100%;
+    }
 
     .hobby-card-content{
         flex-direction: column;
@@ -1656,7 +1670,7 @@ input{
     }
 
     .email-text-wrapper{
-        align-items: center;
+        align-items: flex-start;
     }
 
     .another-contact{

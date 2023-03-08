@@ -14,5 +14,3 @@ function searching() {
         }
     }, 5000);
 }
-    
-    
