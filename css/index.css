@@ -240,10 +240,21 @@ nav a{
     display: flex;
     align-items: center;
     gap: 18px;
+    font-size: 18px;
 }
 
-.search-name-wrapper{
-    font-size: 18px;
+.search-my-name{
+    display: flex;
+}
+
+.search-my-name::after{
+    content: '';
+    display: block;
+    width: 1.5px;
+    height: 20px;
+    background-color: var(--main-khaki-color);
+    margin-left: 8px;
+    animation: blink 1.5s infinite;
 }
 
 .search-icon{
@@ -341,6 +352,10 @@ nav a{
     position: relative;
 }
 
+.index-area figure{
+    cursor: pointer;
+}
+
 .index-area{
     display: flex;
 }
@@ -379,7 +394,7 @@ nav a{
     background-color: var(--main-khaki-color);
     width: 1.5px;
     height: 22px;
-    animation: blink 1s infinite;
+    animation: blink 1.5s infinite;
 }
 
 .introduce-card-box{
@@ -411,6 +426,10 @@ nav a{
     border-radius: 16px;
     overflow: hidden;
     height: 168px;
+}
+
+.my-profile img{
+    transform: translateY(-30%);
 }
 
 .introduce-card{
@@ -778,6 +797,7 @@ nav a{
 
 .workout-index {
     filter: brightness(0.8);
+    cursor: pointer;
 }
 
 .pick-index {
@@ -972,6 +992,7 @@ figcaption{
     left: 50%;
     transform: translateX(-50%);
     animation: downarrow 2s infinite;
+    cursor: pointer;
 }
 
 .folder span{
@@ -1026,17 +1047,27 @@ figcaption{
     width: 90px;
     position: relative;
     z-index: 1;
+    cursor: pointer
 }
 
 .goto-workout-display{
     display: none;
-    /* 인덱스 클릭시 안보이게 하기 위한 클레스 */
 }
 
 .back-index{
     z-index: 0;
     filter: brightness(0.8);
-    /* z-index */
+    animation: click-here 0.5s infinite alternate;
+}
+
+@keyframes click-here{
+    0%{
+        filter: brightness(0.9);
+    }
+    
+    100%{
+        filter: brightness(1.1);
+    }
 }
 
 
@@ -1106,6 +1137,10 @@ form {
 .contact-index-wrapper{
     display: flex;
     gap: 2px;
+}
+
+.contact-index-wrapper div{
+    cursor: pointer;
 }
 
 .contact-index{
@@ -1244,6 +1279,7 @@ form {
     width: 150px;
     padding: 8px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 input{
@@ -1479,11 +1515,13 @@ input{
 
     .my-profile{
         display: flex;
-        flex-direction: column;
         flex-basis: 50%;
-        align-items: flex-start;
+        align-items: end;
         gap: 8px;
-        
+    }
+
+    .my-profile img{
+        transform: unset;
     }
     
     .introduce{
@@ -1495,6 +1533,11 @@ input{
 
     .my-profile figure{
         height: unset;
+        flex-basis: 50%;
+    }
+
+    .name{
+        flex-basis: 50%;
     }
 
     #profile{
@@ -1534,6 +1577,15 @@ input{
     .animation-img-container{
         margin: 0 auto;
     }
+
+    form{
+        justify-content: space-between;
+    }
+
+    .contact-name h4 {
+    font-size: 32px;
+    }
+
 }
 
 @media screen and (max-width:670px) {

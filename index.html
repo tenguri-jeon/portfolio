@@ -732,8 +732,8 @@
                                 </div>
                             </li>
                             <li class="send-email">
-                                <form class="gform" data-email="0108503@gmail.com" method="post"
-                                action="https://script.google.com/macros/s/AKfycbzy_ww-Dh2595HgylyIag_4S97YNMxQdD7U11SrO533omWihWGtwPlEvO0ySDoTYE73/exec"> 
+                                <form class="gform" data-email="0108503@gmail.com" id ="gform" method="post"
+                                action="https://script.google.com/macros/s/AKfycbyG6_gpof2BcQdN_baecOK7pqBdPkG4CtBYio1le76YWuJZs2gI1sDB7AgQJ6QC4U5ExQ/exec"> 
                                 <!-- Replace the form "action" url with the one you cpied for your Web App URL -->
                                 <!-- https://github.com/SaintSilver/html-form-send-email-via-google-script-without-server/blob/master/README.ko.md#8-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-html-form-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%97%B4%EA%B8%B0 -->
                                 <div class="email-text-wrapper">
@@ -741,15 +741,15 @@
                                     <div class="email-name-wrapper">
                                         <div class="email-input">
                                             <p class="email-text">  Your Email </p> 
-                                            <input type="email" placeholder="이메일을 적어주세요">
+                                            <input type="email" id="email" name="email"  placeholder="이메일을 적어주세요">
                                         </div>
                                         <div class="email-name-input">
                                             <p class="email-text" > your Name </p>
-                                            <input type="text" placeholder="성함을 적어주세요">
+                                            <input type="text" id="name" name="name" placeholder="성함을 적어주세요">
                                         </div>
                                     </div>
                                     <p class="email-text"> Your Message </p>
-                                    <input class="your-message-input" placeholder="내용을 작성해 주세요" type="text">
+                                    <input class="your-message-input"  id="message" name="message" placeholder="내용을 작성해 주세요" type="text">
                                     <button class="submit-message" type="submit">Send Message</button>
                                 </div>
                                 <div class="another-contact">

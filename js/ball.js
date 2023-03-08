@@ -47,11 +47,12 @@ function introAnimation() {
     setTimeout(function(){
         downaroowAnimation();
         searchingMyname();
-            for(let i = 0 ; i < typing.length ; i ++) {
-                setTimeout(() => {
-                    makeSearchHistory(typing[i]);
-                }, 1500 * i);
-            }
+        totalSearchHistory()
+        setInterval(() => {
+            totalSearchHistory();
+        }, 14000);
+
+
     },11500)
 } 
 
@@ -60,16 +61,17 @@ const $text = document.querySelectorAll('.explane-me p');
 const searchArea = document.querySelector('.searh-area')
 const $imagine = document.getElementsByClassName('imagine');
 const $searchingMyName = document.getElementsByClassName('search-my-name');
-const plusPx = 60;
+const plusPx = 50;
 const myname = ['신입 퍼블리셔 전규리'];
 const mynameSplit = myname[0].split("");
 let typingSplit;
-let searchContainerHeight = 50; 
+let searchContainerHeight = 60; 
 
 function searchingMyname(){
+    typingName();
     setInterval(()=>{
         typingName();
-    },5000)
+    },12500)
 }
 
 function typingName(){
@@ -81,6 +83,12 @@ function typingName(){
     }
 }
 
+function totalSearchHistory(){
+    for(let i = 0 ; i < typing.length ; i ++) {
+        setTimeout(() => {
+            makeSearchHistory(typing[i]);
+        }, 1500 * i);
+    }
 
 
 function makeSearchHistory(contents) {
@@ -110,13 +118,33 @@ function makeSearchHistory(contents) {
         searchContainerHeight += plusPx;
         searchArea.style.height = `${searchContainerHeight}px`;
         
-            for (let i = 0; i < typing[index].length; i++) {
+
+        makeHistoryLine(contents);
+
+        function makeHistoryLine(textContent){
+            let textTemp = textContent.split("");
+
+            for (let i = 0; i < textTemp.length ; i++) {
                 setTimeout(()=>{
-                    typingSplit = typing[index -1 ].split("")
-                    textContainer.innerHTML += typingSplit[i];
+                    textContainer.innerHTML += textTemp[i];
                 },100*i)
             }
-            index++
+        }
+
+        setTimeout(()=>{
+            removeSerarch();
+        },2000)
+         
+        function removeSerarch() {
+            setTimeout(() => {
+                container.remove();
+                searchContainerHeight -= plusPx;
+                searchArea.style.height = `${searchContainerHeight}px`;
+            }, 5000);
+        }
+}
+
+
 
 }
 
@@ -132,14 +160,24 @@ function clickIndex(params) {
     const $containerskillIndex = document.getElementsByClassName('container-skill-index');
     const $containerworkoutIndex = document.getElementsByClassName('container-workout-index');
     
-    
-    //   navigation[0].addEventListener('click',()=>{
-        //     goProfileContainer();
-        //   })
-        //   navigation[1].addEventListener('click',()=>{
-            
-//   })
-// a여서 안되는 듯??
+
+    navigation[0].addEventListener('click',(e)=>{
+        e.preventDefault();
+        goProfileContainer();
+    })
+    navigation[1].addEventListener('click',(e)=>{  
+        e.preventDefault();
+        goSkillsContainer();     
+    })
+    navigation[2].addEventListener('click',(e)=>{  
+        e.preventDefault();
+        goWorkoutContainer();     
+    })
+    navigation[3].addEventListener('click',(e)=>{  
+        e.preventDefault();
+        goContactContainer();     
+    })
+
 
 
 for (let i = 0; i < $containerskillIndex.length; i++) {
