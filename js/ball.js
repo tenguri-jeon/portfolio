@@ -104,7 +104,7 @@ function totalSearchHistory(){
         const serachIconContainer = document.createElement('figure');
         
         const imgTag = document.createElement('img');
-        imgTag.setAttribute('src','img/🦆 icon _magnifying glass_.png')
+        imgTag.setAttribute('src','img/icon_magnifyingglass_.png')
         imgTag.setAttribute('alt','돋보기')
         
         const textContainer = document.createElement('p')
