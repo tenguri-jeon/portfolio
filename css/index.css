@@ -276,7 +276,7 @@ nav a{
     height: 20px;
     background-color: var(--main-khaki-color);
     margin-left: 8px;
-    animation: blink 1.5s infinite;
+    animation: blink 1s infinite;
 }
 
 .search-icon{
@@ -415,7 +415,7 @@ nav a{
     background-color: var(--main-khaki-color);
     width: 1.5px;
     height: 22px;
-    animation: blink 1.5s infinite;
+    animation: blink 1s infinite;
 }
 
 .introduce-card-box{
@@ -576,7 +576,6 @@ nav a{
 .hobby-card{
     display: flex;
     background-color: var(--main-white-color);
-    margin-top: 16px;
     flex-direction: column;
     border-radius: 8px;
     padding: 16px;
@@ -861,7 +860,6 @@ nav a{
 
 .workout-display{
     display: block;
-    /* js로 안보이는 부분은 display none처리 해주면 됨 */
 }
 
 .workout-infant-container figure{
@@ -947,7 +945,7 @@ nav a{
 
 .code-container figure{
     width: 351px;
-    margin-bottom: 24px;
+    margin: 24px 0px;
 }
 
 .double-slide-wrapper{
@@ -1342,6 +1340,37 @@ input{
     gap: 24px;
 }
 
+.modal-back{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.modal p {
+    margin-bottom: 16px;
+}
+
+.ok{
+    background-color: var(--main-blue-color);
+    border-radius: 8px;
+    padding: 5px;
+    color: var(--main-white-color);
+}
+
+.modal{
+    position: absolute;
+    width: 183px;
+    padding: 24px;
+    right: 50%;
+    background-color: white;
+    box-shadow: 1px 1px 8px 8px rgba(0, 0, 0, 0.1);
+    bottom: 50%;
+    border-radius: 8px;
+    transform: translate(50%, 50%);
+    text-align: center;
+}
+
 @keyframes blink{
     0%{
         opacity: 0;
@@ -1556,6 +1585,10 @@ input{
         justify-content: space-between;
     }
 
+    .hobby-card{
+        margin-top: 16px;
+    }
+
     .my-profile{
         display: flex;
         flex-basis: 50%;
@@ -1565,6 +1598,10 @@ input{
 
     .my-profile img{
         transform: unset;
+    }
+
+    .file-container{
+        padding: unset;
     }
     
     .introduce{
@@ -1657,7 +1694,7 @@ input{
     }
 
     .goto-workout{
-        width: 50px;
+        width: 75px;
     }
 
     .workout-text{
@@ -1737,6 +1774,17 @@ input{
 
 
 @media screen and (max-width:360px) {
+
+    .goto-workout-wrapper{
+        transform: rotate(90deg);
+        transform-origin: center;
+        left: 20%;
+        bottom: -203px;
+    }
+
+    .skills-background-container{
+        padding: 24px 16px;
+    }
     
     header nav{
         display: none;
@@ -1855,11 +1903,5 @@ input{
     .code-container figure{
         width: 250px;
     }
-
-    .another-contact{
-        /* border-left: unset;
-        padding-left: unset; */
-    }
-
    
 }

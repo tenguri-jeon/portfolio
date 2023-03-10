@@ -46,9 +46,4 @@ function contactResize(){
     }
 }
 
-$sendMessage[0].addEventListener('click',()=>[
-    setTimeout(() => {
-        alert('메일이 정상적으로 보내졌습니다. 연락주셔서 감사합니다. :)')
-    }, 2000)
-])
 }
