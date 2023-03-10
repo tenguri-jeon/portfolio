@@ -1799,6 +1799,10 @@ input{
     .workout-text p{
         font-size: 14px;
     }
+
+    .infant-care-code{
+        padding-bottom: 128px;
+    }
 }
 
 
@@ -1808,19 +1812,8 @@ input{
         transform: rotate(180deg);
         z-index: 1;
         right: 16px;
+        bottom: 16px;
     }
-
-    /*.goto-workout{
-        background-color: #eebd40;
-        width: 50px;
-        height: 100px;
-        clip-path: ellipse(30px 50px at 0% 50%);
-        overflow: hidden;
-    }
-
-    .goto-workout-wrapper img{
-        transform: translate(-58%, 15% );
-    } */
 
     .skills-background-container{
         padding: 24px 16px;
@@ -1942,6 +1935,10 @@ input{
 
     .code-container figure{
         width: 250px;
+    }
+
+    .infant-care-code{
+        padding-bottom: 160px;
     }
    
 }
