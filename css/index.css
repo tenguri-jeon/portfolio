@@ -20,7 +20,7 @@ body{
     overflow-x: hidden;
 }
 
-.body-intro{
+.body-scroll{
     overflow: hidden;
 }
 
@@ -1345,22 +1345,27 @@ input{
     height: 100%;
     position: fixed;
     top: 0;
+    backdrop-filter: brightness(0.5) ;
 }
 
 .modal p {
     margin-bottom: 16px;
+    line-height: 150%;
+    font-size: 14px;
 }
 
 .ok{
     background-color: var(--main-blue-color);
     border-radius: 8px;
-    padding: 5px;
+    padding: 5px 10px;
     color: var(--main-white-color);
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .modal{
     position: absolute;
-    width: 183px;
+    width: 250px;
     padding: 24px;
     right: 50%;
     background-color: white;
@@ -1370,6 +1375,12 @@ input{
     transform: translate(50%, 50%);
     text-align: center;
 }
+
+.modal-look{
+    display: none;
+}
+
+
 
 @keyframes blink{
     0%{
@@ -1680,6 +1691,24 @@ input{
     }
 
 
+    .goto-workout-wrapper{
+        transform: rotate(180deg);
+        z-index: 1;
+        right: 30px;
+    }
+
+    .goto-workout{
+        background-color: #eebd40;
+        width: 80px;
+        height: 120px;
+        clip-path: ellipse(50px 70px at 0% 50%);
+        overflow: hidden;
+    }
+
+    .goto-workout-wrapper img{
+        transform: translate(-58%, 0% );
+    }
+
 
 }
 
@@ -1776,11 +1805,22 @@ input{
 @media screen and (max-width:360px) {
 
     .goto-workout-wrapper{
-        transform: rotate(90deg);
-        transform-origin: center;
-        left: 20%;
-        bottom: -203px;
+        transform: rotate(180deg);
+        z-index: 1;
+        right: 16px;
     }
+
+    /*.goto-workout{
+        background-color: #eebd40;
+        width: 50px;
+        height: 100px;
+        clip-path: ellipse(30px 50px at 0% 50%);
+        overflow: hidden;
+    }
+
+    .goto-workout-wrapper img{
+        transform: translate(-58%, 15% );
+    } */
 
     .skills-background-container{
         padding: 24px 16px;
