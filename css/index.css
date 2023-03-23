@@ -606,12 +606,17 @@ nav a{
    flex-direction: column;
    align-items: center;
    text-align: center;
+   position: relative;
 }
 
 .hobby-card-content{
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
+}
+
+.drawing a:hover + figure{
+    transform: scale(1.2);
 }
 
 #skills .index-area figure:nth-child(1){
@@ -1091,9 +1096,6 @@ figcaption{
     animation: click-here 0.5s infinite alternate;
 }
 
-
-
-
 .contact-file-name{
     background-color: var(--main-white-color);
     border: 1px solid var(--contact-gray-color);
@@ -1123,6 +1125,16 @@ figcaption{
 
 .send-email{
     flex-grow: 100;
+}
+
+.github-address{
+    position: relative;
+}
+
+.github-address figure{
+    margin-top: 16px;
+    width: 50px;
+    height: 50px;
 }
 
 .another-contact{
