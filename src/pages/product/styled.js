@@ -89,7 +89,8 @@ export const ProductItemContainer = styled.li`
             gap: 4px;
             height: unset;
             li{
-                border: 1px solid black;
+                border: 1px solid #399189;
+                color : #399189;
                 padding: 0px 10px;
                 border-radius: 4px;
                 font-size: 10px;
@@ -122,9 +123,12 @@ export const ProductItemContainer = styled.li`
                     border-color: #FF58D5;
                     color: #FF58D5;
                 }
-                &.scss{
-                    border-color: #FF58D5;
-                    color: #FF58D5;
+                &.node\.js{
+                    color: #10433E;
+                }
+                &.mysql{
+                    border-color: #00608C;
+                    color: #00608C;
                 }
                 &.스타일컴포넌트{
                     border-color:tomato ;

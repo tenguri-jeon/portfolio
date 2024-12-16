@@ -219,6 +219,14 @@ export const ModalCon = styled.div`
                                 text-align: start;
                                 padding: 10px 15px;
                                 border-radius: 0px;
+                                a{
+                                    color: rgba(255,255,255,0.9);
+                                    text-decoration : underline;
+                                    transition : 0.2s;
+                                    &:hover{
+                                        color: #437dff;
+                                    }
+                                }
                             }
                         }
                     }
