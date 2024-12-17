@@ -99,6 +99,10 @@ export const ProductItemContainer = styled.li`
                     border-color: #E44F26;
                     color: #E44F26;
                 }
+                &.Typesciprt{
+                    border-color: #3178C6;
+                    color: #3178C6;
+                }
                 &.css{
                     border-color: #1572B6;
                     color: #1572B6;

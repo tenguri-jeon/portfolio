@@ -86,6 +86,7 @@ export const ModalCon = styled.div`
     top: 50px;
     right: 50%;
     transform: translate(50% , 0%);
+    box-sizing : border-box;
     .modal-header{
         padding: 12px 15px;
         display: flex;
@@ -192,7 +193,7 @@ export const ModalCon = styled.div`
                         flex-direction: column;
                         gap: 26px;
                         :nth-child(1){
-                            margin-right: 50px;
+                            // margin-right: 50px;
                         }
                         :nth-child(2){
                             ul{
@@ -219,6 +220,7 @@ export const ModalCon = styled.div`
                                 text-align: start;
                                 padding: 10px 15px;
                                 border-radius: 0px;
+                                width : 100%;
                                 a{
                                     color: rgba(255,255,255,0.9);
                                     text-decoration : underline;
@@ -276,6 +278,7 @@ export const ModalCon = styled.div`
                         height: unset;
                         flex-direction: row !important;
                         gap:unset;
+                        margin-bottom: 30px;
                         li{
                             cursor: pointer;
                             width: calc((100% - 2 * 18px) / 3);

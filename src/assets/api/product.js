@@ -3,6 +3,53 @@ export default[
         id : 1 , 
         skills : [
             {id : 1 , con : 'react'},
+            {id : 2 , con : 'Typesciprt'},
+            {id : 3 , con : '스타일컴포넌트'}
+        ],
+        mainimg : 'hangman_video.mp4' , 
+        type : '개인 프로젝트',
+        name: 'Hangman Game',
+        bg: 'hangman.png' , 
+        modalbg : 'hangmanbg.png',
+        con : `
+            axios로 영단어를 받아와 단어를 받아와 <br>
+            사용자가 알파벳으로 유추하여  단어를 맞추는 간단한 게임으로, <br>
+            Typescript 를 공부하고 적용하기 위해 제작한 토이프로젝트입니다. 
+        `  ,
+        category : 'WEB PROJECT',
+        duration : '3주',
+        introduce : `
+            Typescipt를 공부하여 적용해 본 토이 프로젝트 입니다. <br><br>
+
+            어렸을적 hangman 게임을 했던 기억을 떠올려 제작한 프로젝트로 <br>
+            axios를 사용하여 영단어를 가져와 난이도를 나누고, <br>
+            input 요소에 키보드로 알바벳을 작성하여 유추하는 게임입니다.<br>
+            
+            github : <a href="https://github.com/tenguri-jeon/hangman">https://github.com/tenguri-jeon/hangman</a>
+        `,
+        trouble : [
+            // {id: 1 , title : 'Menu쪽 Menu의 같은 페이지 구조로 하나의 jsx 사용해야할지 다양한 jsx를 제작해야 할지에 대한 고민' , con : `Menu쪽 페이지를 제작하며, 디저트와 beverage MD 페이지 모두 같은 구조를 가지고 있음을 볼 수 있었습니다. 세개의 JSX를 만들어 페이지를 구성하려던 중 "하나로 할 수 있겠는데?"라는 생각이 들어 하나의 페이지로 표현하기로 하였습니다. 어떻게 해야하나 감이 잡히지 않았지만, app.jsx에서 3개의 path를 다르게 설정한 다음, 페이지 클릭시 바뀐 url을 useLocation을 사용하여 path위치를 가져와 path위치에 맞는 data를 redux로 가져오게 설정하여 페이지를 완성하였습니다`},
+            // {id: 2 , title : '조건부 렌더링을 활용한 modal창 구현에 대한 고민' , con : `1번과 비슷한 고민으로, Menu쪽 Modal을 클릭할 시 모두 똑같은 구성을 하고 있을것이라는 생각과 달리, 조금씩 다른 Modal로 구성되어 있었습니다. 처음에는 위와 같이 "여러개의 components를 만든 다음 데이터를 넣어줘야하나?" 라는 생각이 있었지만, data를 생성할 때 필요한 데이터를 만들고, 필요없는 데이터는 빈칸으로 두었습니다. 이후 modal이 생성될 때, ()가 없으면 생성하지 말아라는 명령어를 만들어 각가 조금씩 다른 Modal를 표현할 수 있었습니다.`}
+        ],
+        function_item : [
+            {id : 1 , con : 'Axios를 사용한 외부 데이터 가져와 사용함'},
+            {id : 2 , con : '한글 입력 시 "영어만 사용 가능합니다" 알림'},
+            {id : 3 , con : '동일한 알파벳 입력 시 "중복되었습니다" 알림'},
+            {id : 4 , con : '8번의 유추기회 상실시 정답 알려주고 다음문제로 이동'},
+            {id : 5 , con : '8번 이내로 정답 시 정답입니다 알림 후 다음문제로 이동동'},
+            {id : 6 , con : 'Router를 사용하여 홈으로 이동 기능 구현현'},
+            {id : 7 , con : 'useEffect와 setInterval을 사용하여 5초 후 모달 자동으로 사라지기'},
+        ],
+        url:'https://tenguri-jeon.github.io/hangman.gitub.io/',
+        workScreen : [
+            {id : 1 , title : 'homepage' , Ktitle: '[홈화면면]' ,  imgurl : 'hangman.png'},
+            {id : 2 , title : 'game' , Ktitle: '[게임화면]' ,  imgurl : 'hangman_2.png'},
+        ]
+    },
+    {
+        id : 2 , 
+        skills : [
+            {id : 1 , con : 'react'},
             {id : 2 , con : 'redux'},
             {id : 3 , con : '스타일컴포넌트'},
             {id : 4 , con : '반응형'}
@@ -39,7 +86,7 @@ export default[
             {id : 6 , con : 'kakao api를 이용한 지도 구현'},
             {id : 7 , con : '반응형 웹사이트 구현'},
         ],
-        url:'',
+        url:'https://teamproject-dessert39.github.io/dessert39/dist/',
         workScreen : [
             {id : 1 , title : 'intro' , Ktitle: '[인트로]' ,  imgurl : 'dessert39_1.png'},
             {id : 2 , title : 'intro' , Ktitle: '[Menupage1]' ,  imgurl : 'dessert39_2.png'},
@@ -50,7 +97,7 @@ export default[
         ]
     },
     {
-        id : 2 , 
+        id : 3 , 
         skills : [
             {id : 1 , con : 'react'},
             {id : 2 , con : 'redux'},,
@@ -98,7 +145,7 @@ export default[
         ]
     },
     {
-        id : 3, 
+        id : 4 , 
         skills : [
             {id : 1 , con : 'html'},
             {id : 2 , con : 'css'},
@@ -146,7 +193,7 @@ export default[
         ]
     },
     {
-        id : 4 , 
+        id : 5 , 
         skills : [
             {id : 1 , con : 'html'},
             {id : 2 , con : 'css'},
@@ -200,7 +247,7 @@ export default[
         ]
     },
     {
-        id : 5 , 
+        id : 6 , 
         skills : [
             {id : 1 , con : 'react'},
             {id : 2 , con : 'scss'}
@@ -242,9 +289,8 @@ export default[
             {id : 1 , title : 'main' , Ktitle: '메인화면' ,  imgurl : 'queen_mainimg.png'},
         ]
     },
-
     {
-        id : 6 , 
+        id : 7 , 
         skills : [
             {id : 1 , con : 'react'},
             {id : 2 , con : 'redux'},
@@ -284,7 +330,7 @@ export default[
         ]
     },
     {
-        id : 7, 
+        id : 8, 
         skills : [
             {id : 1 , con : 'html'},
             {id : 2 , con : 'css'},

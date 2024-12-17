@@ -85,7 +85,7 @@ export const HeaderComponents = styled.li`
                 flex-direction: column;
                 transition: 0.5s;
                 position: relative;
-                height: 100vh;
+                height: 100%;
                 &.on{
                     ul{
                        &:nth-child(1){

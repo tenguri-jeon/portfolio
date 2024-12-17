@@ -11,7 +11,7 @@ export const CareerListContainer = styled.ul`
         align-content: flex-start;
         margin-left: 3.1250vw;
         transition: 0.5s;
-        height: unset;
+        height: 100%;
         gap: unset;
         margin-bottom: 360px;
     }
@@ -43,7 +43,7 @@ export const CarrerItemContainer = styled.li`
     transition: 0.5s;
     margin-right: 0.7813vw;
     margin-bottom: 0.7813vw;
-    height: auto;
+    height: calc(100% / 3 - 8px);
     cursor: pointer;
     &:hover{
         background: #131A26;
